@@ -1,0 +1,1 @@
+# szkolenie_python-2024_07_08-12
