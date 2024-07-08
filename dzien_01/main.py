@@ -575,3 +575,10 @@ zmienna = "ala ma kota"
 # print(
 #     f"W pliku '{nazwa_pliku}' ciąg '{szukany_tekst}' występuje {zawartosc_pliku.count(szukany_tekst)} razy."
 # )
+
+
+### ZADANIE
+
+# Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika poszukiwaną frazę oraz nazwę pliku.
+# W wyniku wyszukiwarka powinna pokazać w której linii wystąpiła wyszukiwana fraza i całą linię.
+# Wyszukiwarka powinna być nieczuła na wielkość liter.
