@@ -418,3 +418,26 @@ zmienna = "ala ma kota"
 #     print("else dla for się wykonał - pętla przeszła w całości")
 
 # print("Koniec petli")
+
+
+# pętla WHILE
+
+# while warunek:
+#     jakieś operacje
+
+# while True:
+#     print("działam")
+
+
+# while False:
+#     print("działam")
+
+# też działają:
+# break = przestan wykonywac petle
+# continue = przestan wykonywac biezaca iteracje i idz do nastepnej
+
+
+### ZADANIE
+
+# Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
+# nie przekroczy wartości podanej przez użytkownika.
