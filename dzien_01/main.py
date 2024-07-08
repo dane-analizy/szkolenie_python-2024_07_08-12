@@ -235,5 +235,35 @@
 # Napisz program, który pobierze od użytkownika masę i wzrost,
 # a następnie policzy BMI i wypisze wynik na konsolę.
 
-# bmi = weight (kg) / height( m) **2
+# bmi = weight (kg) / height(m) **2
 
+
+# rozwiazanie zadania
+
+wzrost = input("Czesc, podaj mi swoj wzrost w [cm]")
+masa = input("a teraz podaj mi swoja mase ciala w [kg]")
+
+wzrost = float(wzrost)
+masa = float(masa)
+
+bmi = masa / (wzrost / 100) ** 2
+print(f"Twoje BMI, przy wzroscie {wzrost} cm i wadze {masa} kg wynosi: {bmi:.1f}")
+
+
+# rzutowanie na float w bezpieczny sposób
+
+# def to_float(s):
+#     try:
+#         f = float(s)
+#     except:
+#         f = None
+#     return f
+
+
+# s = "12efwgf23.123"
+
+# print(to_float(s))
+
+# print(float(s))
+
+# print("a to jest po wszystkim")
