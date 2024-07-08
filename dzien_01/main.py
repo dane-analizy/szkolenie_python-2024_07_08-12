@@ -464,3 +464,15 @@ zmienna = "ala ma kota"
 #         break
 #     print(f"2 do potęgi {potega} = {wynik_potegowania}")
 #     potega = potega + 1
+
+
+# Czytanie plików
+# nazwa_pliku = "test.txt"
+# for linia in open(nazwa_pliku, encoding="utf-8"):
+#     linia_czysta = linia.strip()
+#     print(f"{len(linia_czysta)}: |{linia_czysta}|")
+
+
+### ZADANIE
+
+# Wczytaj tekst "Pana Tadeusza" i policz ile jest w nim NIEPUSTYCH linii.
