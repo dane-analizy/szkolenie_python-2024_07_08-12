@@ -339,3 +339,19 @@ zmienna = "ala ma kota"
 # 2x1 = ..
 # ..
 # 5x5 = 25
+
+
+# rozwiązanie 1 
+# for licznik_1 in range(1, 6):
+#     for licznik_2 in range(1, 6):
+#         wynik = licznik_1 * licznik_2
+#         print(f"{licznik_1} x {licznik_2} = {wynik}")
+
+
+# rozwiązanie 1 bardziej fancy
+
+# for licznik_1 in range(1, 6):
+#     for licznik_2 in range(1, 6):
+#         wynik = licznik_1 * licznik_2
+#         print(f"{licznik_1} x {licznik_2} = {wynik} \t", end="")
+#     print()
