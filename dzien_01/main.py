@@ -240,14 +240,14 @@
 
 # rozwiazanie zadania
 
-wzrost = input("Czesc, podaj mi swoj wzrost w [cm]")
-masa = input("a teraz podaj mi swoja mase ciala w [kg]")
+# wzrost = input("Czesc, podaj mi swoj wzrost w [cm]")
+# masa = input("a teraz podaj mi swoja mase ciala w [kg]")
 
-wzrost = float(wzrost)
-masa = float(masa)
+# wzrost = float(wzrost)
+# masa = float(masa)
 
-bmi = masa / (wzrost / 100) ** 2
-print(f"Twoje BMI, przy wzroscie {wzrost} cm i wadze {masa} kg wynosi: {bmi:.1f}")
+# bmi = masa / (wzrost / 100) ** 2
+# print(f"Twoje BMI, przy wzroscie {wzrost} cm i wadze {masa} kg wynosi: {bmi:.1f}")
 
 
 # rzutowanie na float w bezpieczny sposób
@@ -267,3 +267,20 @@ print(f"Twoje BMI, przy wzroscie {wzrost} cm i wadze {masa} kg wynosi: {bmi:.1f}
 # print(float(s))
 
 # print("a to jest po wszystkim")
+
+# rozwiazanie drugie
+
+
+# masa = input("Podaj masę ciała w kg: ")
+# if not masa.isdigit():
+#     print("To nie jest liczba")
+#     exit()
+
+# wzrost = input("Podaj wzrost w cm: ")
+# if not wzrost.isdigit():
+#     print("To nie jest liczba")
+#     exit()
+
+# bmi = round(float(masa) / pow(float(wzrost/100), 2), 2)
+
+# print("BMI: ", bmi)
