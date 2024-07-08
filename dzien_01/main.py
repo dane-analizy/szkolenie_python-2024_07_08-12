@@ -441,3 +441,26 @@ zmienna = "ala ma kota"
 
 # Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi (wynik potęgowania)
 # nie przekroczy wartości podanej przez użytkownika.
+
+# limit = int(input("Jaki jest limit? "))
+
+# potega = 0
+# wynik_potegowania = 2**potega
+
+# while wynik_potegowania <= limit:
+#     print(f"2 do potęgi {potega} = {wynik_potegowania}")
+#     potega = potega + 1
+#     # potega += 1
+#     wynik_potegowania = 2**potega
+
+
+# limit = int(input("Jaki jest limit? "))
+
+# potega = 0
+
+# while True:
+#     wynik_potegowania = 2**potega
+#     if wynik_potegowania > limit:
+#         break
+#     print(f"2 do potęgi {potega} = {wynik_potegowania}")
+#     potega = potega + 1
