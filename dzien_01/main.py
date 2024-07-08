@@ -311,11 +311,11 @@ zmienna = "ala ma kota"
 # print("range z samym stop:")
 # for licznik in range(3):
 #     print(licznik)
-    
+
 # print("range z start i  stop:")
 # for licznik in range(10, 13):
 #     print(licznik)
-    
+
 # print("range z start, stop i step:")
 # for licznik in range(10, 20, 3):
 #     print(licznik)
@@ -323,4 +323,19 @@ zmienna = "ala ma kota"
 
 ### ZADANIE
 
-# Wypisz kolejne 10 potęg liczby 2, począwszy od 2 do potęgi 1
+# Wypisz kolejne 10 potęg liczby 2, począwszy od potęgi 1 (czyli: 2^1, 2^2, ..., 2^10)
+
+# for potega in range(1, 11):
+#     potega_wynik = 2**potega
+#     print(f"2^{potega} = {potega_wynik}")
+
+
+### ZADANIE
+
+# Wypisz tabliczkę mnożenia do 5x5 w kolejnych liniach, czyli:
+# 1x1 = ..
+# 1x2 = ..
+# 1x5 = ..
+# 2x1 = ..
+# ..
+# 5x5 = 25
