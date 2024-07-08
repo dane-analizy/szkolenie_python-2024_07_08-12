@@ -530,12 +530,12 @@ zmienna = "ala ma kota"
 
 # for numer_linii, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
 #     # if len(linia.strip()) and not linia.startswith("#"): # - przepuści linię z komentarzem i spacjami na początku
-#     # if len(linia.strip()) and "#" not in linia: # - to przepiści komentarze na końcu linii
+#     # if len(linia.strip()) and "#" not in linia: # - to przepuści komentarze na końcu linii
 #     if len(linia.strip()) and not linia.strip().startswith("#"):
 #         print(numer_linii, linia, end="")
 
 
-# czy string występuje w innym stringu? wielkośc znaków ma zanczenie
+# czy string występuje w innym stringu? wielkość znaków ma znaczenie
 # print("abc" in "aBcdef")
 
 # ile razy ciąg "abc" występuje w tym długim?
@@ -549,3 +549,29 @@ zmienna = "ala ma kota"
 
 # cały plik w jednej zmiennej
 # zawartosc_pliku = open(...).read()
+
+
+# rozwiązanie długie
+
+# nazwa_pliku = input("Podaj nazwę pliku: ")
+# szukany_tekst = input("Czego szukamy? ")
+# szukany_tekst = szukany_tekst.lower()
+
+# zawartosc_pliku = open(nazwa_pliku, encoding="utf-8").read()
+# zawartosc_pliku = zawartosc_pliku.lower()
+
+# ile_wystapien = zawartosc_pliku.count(szukany_tekst)
+
+# print(f"W pliku '{nazwa_pliku}' ciąg '{szukany_tekst}' występuje {ile_wystapien} razy.")
+
+
+# rozwiazanie krótsze
+
+# nazwa_pliku = input("Podaj nazwę pliku: ")
+# szukany_tekst = input("Czego szukamy? ").lower()
+
+# zawartosc_pliku = open(nazwa_pliku, encoding="utf-8").read().lower()
+
+# print(
+#     f"W pliku '{nazwa_pliku}' ciąg '{szukany_tekst}' występuje {zawartosc_pliku.count(szukany_tekst)} razy."
+# )
