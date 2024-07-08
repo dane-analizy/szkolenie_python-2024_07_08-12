@@ -81,10 +81,10 @@
 
 
 # łącznie napisów
-imie = "Łukasz"
-liczba = 123
-znak = "A"
-liczba_float = 1234.56789
+# imie = "Łukasz"
+# liczba = 123
+# znak = "A"
+# liczba_float = 1234.56789
 
 # print(imie, liczba, znak)
 # print(imie + " " + str(liczba) + znak + str(liczba_float))
@@ -109,3 +109,25 @@ liczba_float = 1234.56789
 ### ZADANIE 1
 # Zdefiniuj kilka zmiennych, w różnych typach.
 # Wyświetl je korzystając z print() i f-string, każda zmienna w oddzielnej linii.
+
+# nazwisko = "kowalski"
+# wiek = 35
+# ulubiona_litera = "Z"
+
+# print(nazwisko)
+# print(wiek)
+# print(ulubiona_litera)
+
+# print(f"{nazwisko=}\n{wiek=}\n{ulubiona_litera=}")
+
+
+### POBIERANIE INFORMACJI OD UŻYTKOWNIKA
+
+# info_od_usera = input("tekst zachęty: ")
+# print(info_od_usera)
+# print(type(info_od_usera))
+
+
+#### ZADANIE 2
+
+# Pobierz od użytkownika jego imię i nazwisko (osobne zapytania) i wyświetl napis "Cześc, {imie} {nazwisko}!"
