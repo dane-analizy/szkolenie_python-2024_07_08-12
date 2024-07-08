@@ -341,7 +341,7 @@ zmienna = "ala ma kota"
 # 5x5 = 25
 
 
-# rozwiązanie 1 
+# rozwiązanie 1
 # for licznik_1 in range(1, 6):
 #     for licznik_2 in range(1, 6):
 #         wynik = licznik_1 * licznik_2
@@ -355,3 +355,35 @@ zmienna = "ala ma kota"
 #         wynik = licznik_1 * licznik_2
 #         print(f"{licznik_1} x {licznik_2} = {wynik} \t", end="")
 #     print()
+
+
+# to nie jest rozwiązanie - poszukaj przyczyny
+# for pierwsza_petla in range(2, 3):
+#     for druga_petla in range(1, 11, 1):
+#         wynik = pierwsza_petla**druga_petla
+#         print(f"{pierwsza_petla} x {druga_petla} = {wynik} \t", end="")
+#     print()
+
+
+# zmienna = "ala ma kota"
+# for _ in range(5):
+#     print(zmienna)
+
+
+# string jest listą
+# lista = [4, 6246, 134, 1135, "262", 8579, "46", 234]
+# lista = "napis"
+# for element in lista:
+#     print(element, type(element))
+
+
+
+### ZADANIE
+
+# Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
+
+# i = 21
+# print(i % 2)
+# print(i // 2)
+
+
