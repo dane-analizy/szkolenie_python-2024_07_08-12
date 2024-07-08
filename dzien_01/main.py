@@ -377,7 +377,6 @@ zmienna = "ala ma kota"
 #     print(element, type(element))
 
 
-
 ### ZADANIE
 
 # Wydrukuj liczby od 1 do 100 razem z informacją czy liczba jest parzysta czy nieparzysta.
@@ -386,4 +385,36 @@ zmienna = "ala ma kota"
 # print(i % 2)
 # print(i // 2)
 
+# rozwiązanie
+# for i in range(1, 101):
+#     if (i % 2) == 0:
+#         print(f"{i} parzysta")
+#     else:
+#         print(f"{i} nieparzysta")
 
+
+# rozwiązanie nieco bardziej "pythonoic"
+# for i in range(1, 101):
+#     if (i % 2):
+#         print(f"{i} nieparzysta")
+#     else:
+#         print(f"{i} parzysta")
+
+
+# break = przestan wykonywac petle
+# continue = przestan wykonywac biezaca iteracje i idz do nastepnej
+
+# jesli nieparzysta = nie wyswiatlaj nic
+# for i in range(1, 101):
+#     if i % 2:
+#         continue
+
+#     # if i > 50:
+#     #     break
+
+#     print(f"{i} parzysta")
+
+# else:
+#     print("else dla for się wykonał - pętla przeszła w całości")
+
+# print("Koniec petli")
