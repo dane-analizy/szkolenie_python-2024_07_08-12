@@ -1,0 +1,6 @@
+pierwsza linia
+    druga ma na początku spacje
+trzecia linia ma spacje na końcu      
+     czwarta linijka ma spacje z obu stron         
+
+szósta linia, bo piąta była pusta
