@@ -131,3 +131,19 @@
 #### ZADANIE 2
 
 # Pobierz od użytkownika jego imię i nazwisko (osobne zapytania) i wyświetl napis "Cześc, {imie} {nazwisko}!"
+
+# PRZYWITANIE = "cześć"
+# nazwisko_usera = input("Podaj swoje nazwisko: ")
+# imie_usera = input("Podaj swoje imie: ")
+
+# print(PRZYWITANIE, imie_usera, nazwisko_usera)
+
+# PRZYWITANIE = "cześć"
+# imie_usera = input("Podaj swoje imie: ")
+
+# uywamy już pobranego imienia w prompcie
+# nazwisko_usera = input(f"Jak się nazywasz, {imie_usera}? ")
+
+# f-string mozna wykorzystac do zbudowania nowej zmiennej typu str
+# wynik = f"{PRZYWITANIE} {imie_usera} {nazwisko_usera}"
+# print(wynik)
