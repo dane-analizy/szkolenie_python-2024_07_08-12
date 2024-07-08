@@ -186,3 +186,54 @@
 
 # Pobierz od użytkownika liczbę i sprawdź czy jest większa niż 100.
 # Wypisz odpowiedni komunikat w zaleznosci od wartości wpisanej liczby.
+
+
+## rozwiązanie 1
+
+# liczba = input("Podaj prosze dowolna liczbe:")
+# liczba = float(liczba)
+
+# if liczba > 100:
+#     print("Podana liczba jest wieksza niz 100")
+# elif liczba == 100:
+#     print("Podana liczba jest rowna 100")
+# elif liczba < 50:
+#     print("Podana liczba jest mniejsza niz 50")
+# else:
+#     print("Podana liczba jest mniejsza niz 100 i większa niż 50")
+
+
+## rozwiązanie 2
+
+
+# liczba = input("Podaje liczbę: ")
+
+# if not liczba.isdigit():
+#     print("to nie jest liczba")
+#     exit() # kończymy program
+
+# # jest liczbą - więc sprawdzamy warunki
+# if int(liczba) > 100:
+#     print("Liczba jest WIEKSZA niż 100")
+# elif int(liczba) < 100:
+#     print("Liczba jest MNIEJSZA niż 100")
+# elif int(liczba) == 100:
+#     print("Liczba jest równa 100")
+
+# kwadrat liczby:
+# x*x
+# x**2
+# pow(x, 2)
+
+# szescian liczby:
+# x*x*x
+# x**3
+# pow(x, 3)
+
+#### ZADANIE
+
+# Napisz program, który pobierze od użytkownika masę i wzrost,
+# a następnie policzy BMI i wypisze wynik na konsolę.
+
+# bmi = weight (kg) / height( m) **2
+
