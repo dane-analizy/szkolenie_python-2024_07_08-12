@@ -535,8 +535,10 @@ zmienna = "ala ma kota"
 #         print(numer_linii, linia, end="")
 
 
+# czy string występuje w innym stringu? wielkośc znaków ma zanczenie
 # print("abc" in "aBcdef")
 
+# ile razy ciąg "abc" występuje w tym długim?
 # print("abcdefabcghiabc".count("abc"))
 
 
@@ -547,4 +549,3 @@ zmienna = "ala ma kota"
 
 # cały plik w jednej zmiennej
 # zawartosc_pliku = open(...).read()
-
