@@ -141,9 +141,48 @@
 # PRZYWITANIE = "cześć"
 # imie_usera = input("Podaj swoje imie: ")
 
-# uywamy już pobranego imienia w prompcie
+# uzywamy już pobranego imienia w prompcie
 # nazwisko_usera = input(f"Jak się nazywasz, {imie_usera}? ")
 
 # f-string mozna wykorzystac do zbudowania nowej zmiennej typu str
 # wynik = f"{PRZYWITANIE} {imie_usera} {nazwisko_usera}"
 # print(wynik)
+
+
+# operacje na stringach:
+
+# s = "  aBcDe  FgH"
+# print(s)
+
+# s_wielkimi = s.upper()
+# print(s_wielkimi)
+
+# s_malymi = s.lower()
+# print(s_malymi)
+
+# s_jak_tytul = s.title()
+# print(s_jak_tytul)
+
+# s_bez_pustych_znakow = s.strip()
+# print(s_bez_pustych_znakow)
+
+# s_bez_spacji = s.replace(" ", "")
+# print(s_bez_spacji)
+
+
+## Sprawdzamy czy imie zostało wpisane wielką literą
+
+# imie = input("Podaj imię: ")
+# imie_wielka_litera = imie.title()
+# print(f"{imie=}\n{imie_wielka_litera=}")
+
+# if imie == imie_wielka_litera:
+#     print("zgadza się")
+# else:
+#     print("nie zgadza się")
+
+
+### ZADANIE
+
+# Pobierz od użytkownika liczbę i sprawdź czy jest większa niż 100.
+# Wypisz odpowiedni komunikat w zaleznosci od wartości wpisanej liczby.
