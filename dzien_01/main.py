@@ -102,5 +102,10 @@ liczba_float = 1234.56789
 # print(f"Tutaj jest liczba: {liczba}\nTutaj jest imie: {imie}\n{znak} {liczba_float}")
 
 # print(f"{liczba=}\n{imie=}\n{znak}\n{liczba_float:.2f}\n{liczba_float}")
-liczba_float_round = round(liczba_float, 2)
-print(f"{liczba_float=}\n{liczba_float_round=}")
+# liczba_float_round = round(liczba_float, 2)
+# print(f"{liczba_float=}\n{liczba_float_round=}")
+
+
+### ZADANIE 1
+# Zdefiniuj kilka zmiennych, w różnych typach.
+# Wyświetl je korzystając z print() i f-string, każda zmienna w oddzielnej linii.
