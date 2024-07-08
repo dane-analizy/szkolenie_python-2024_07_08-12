@@ -517,3 +517,19 @@ zmienna = "ala ma kota"
 ### ZADANIE
 
 # Wypisz wszystkie NIEPUSTE linie z pliku main.py, które nie są komentarzem.
+
+
+# linie - utrudnienia:
+
+# utrudnienie - komentarz nie od początku linii
+print("ala ma kota")  # to jest komentarz na końcu linii
+
+
+# rozwiązanie
+nazwa_pliku = "main.py"
+
+for numer_linii, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
+    # if len(linia.strip()) and not linia.startswith("#"): # - przepuści linię z komentarzem i spacjami na początku
+    # if len(linia.strip()) and "#" not in linia: # - to przepiści komentarze na końcu linii
+    if len(linia.strip()) and not linia.strip().startswith("#"):
+        print(numer_linii, linia, end="")
