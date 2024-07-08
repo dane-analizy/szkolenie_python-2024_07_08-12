@@ -1,0 +1,36 @@
+Finał;W;10.10.2021;20:45;Hiszpania;1:2;Francja;31.511
+-;G;28.03.2017;21:00;Francja;0:2;Hiszpania;79.021
+-;G;04.09.2014;21:00;Francja;1:0;Hiszpania;80.000
+Grupa I;G;26.03.2013;21:00;Francja;0:1;Hiszpania;79.959
+Grupa I;W;16.10.2012;21:00;Hiszpania;1:1;Francja;46.000
+1/4 finał;W;23.06.2012;20:45;Hiszpania;2:0;Francja;47.000
+-;G;03.03.2010;21:00;Francja;0:2;Hiszpania;79.021
+-;W;06.02.2008;-;Hiszpania;1:0;Francja;29.000
+1/8 finału;W;27.06.2006;21:00;Hiszpania;1:3;Francja;43.000
+-;W;28.03.2001;-;Hiszpania;2:1;Francja;35.500
+1/4 finał;W;25.06.2000;20:45;Hiszpania;1:2;Francja;28.000
+-;G;28.01.1998;-;Francja;1:0;Hiszpania;78.836
+Grupa B;G;15.06.1996;18:00;Francja;1:1;Hiszpania;35.600
+Grupa 1;W;12.10.1991;-;Hiszpania;1:2;Francja;20.000
+Grupa 1;G;20.02.1991;-;Francja;3:1;Hiszpania;41.174
+-;G;23.03.1988;20:35;Francja;2:1;Hiszpania;14.441
+Finał;G;27.06.1984;20:00;Francja;2:0;Hiszpania;47.368
+-;G;05.10.1983;20:30;Francja;1:1;Hiszpania;36.628
+-;W;18.02.1981;21:30;Hiszpania;1:0;Francja;18.000
+-;G;08.11.1978;-;Francja;1:0;Hiszpania;37.897
+-;W;17.03.1971;20:30;Hiszpania;2:2;Francja;20.038
+-;G;17.10.1968;-;Francja;1:3;Hiszpania;35.000
+-;W;09.01.1963;-;Hiszpania;0:0;Francja;72.000
+-;G;10.12.1961;-;Francja;1:1;Hiszpania;46.496
+-;W;02.04.1961;-;Hiszpania;2:0;Francja;75.000
+-;G;17.12.1959;-;Francja;4:3;Hiszpania;38.622
+-;G;13.03.1958;-;Francja;2:2;Hiszpania;37.983
+-;W;17.03.1955;-;Hiszpania;1:2;Francja;125.000
+-;G;19.06.1949;15:00;Francja;1:5;Hiszpania;52.217
+-;W;15.03.1942;16:30;Hiszpania;4:0;Francja;40.000
+-;W;24.01.1935;15:00;Hiszpania;2:0;Francja;22.000
+-;G;23.04.1933;15:00;Francja;1:0;Hiszpania;45.010
+-;W;14.04.1929;16:30;Hiszpania;8:1;Francja;15.000
+-;G;22.05.1927;-;Francja;1:4;Hiszpania;25.000
+-;W;28.01.1923;15:30;Hiszpania;3:0;Francja;15.000
+-;G;30.04.1922;15:00;Francja;0:4;Hiszpania;10.000

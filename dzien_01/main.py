@@ -1,3 +1,7 @@
+# czyszczenie terminala, odpowiednik Ctrl-L
+print("\033c", end="")
+
+
 # print("hello world")
 
 
@@ -284,3 +288,34 @@
 # bmi = round(float(masa) / pow(float(wzrost/100), 2), 2)
 
 # print("BMI: ", bmi)
+
+
+### PĘTLE
+
+zmienna = "ala ma kota"
+
+# print(zmienna)
+# print(zmienna)
+# print(zmienna)
+# print(zmienna)
+# print(zmienna)
+
+# print(zmienna, zmienna, zmienna, zmienna, zmienna)
+
+# 5 przebiegów pętli
+# for licznik in range(5):
+#     print(licznik)
+#     print(zmienna)
+
+
+# print("range z samym stop:")
+# for licznik in range(3):
+#     print(licznik)
+    
+# print("range z start i  stop:")
+# for licznik in range(10, 13):
+#     print(licznik)
+    
+# print("range z start, stop i step:")
+# for licznik in range(10, 20, 3):
+#     print(licznik)
