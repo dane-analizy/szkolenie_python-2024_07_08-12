@@ -476,3 +476,44 @@ zmienna = "ala ma kota"
 ### ZADANIE
 
 # Wczytaj tekst "Pana Tadeusza" i policz ile jest w nim NIEPUSTYCH linii.
+
+# rozwiązanie
+# nazwa_pliku = "pan-tadeusz.txt"
+
+# liczba_wszystkich = 0
+# liczba_niepustych = 0
+
+# for linia in open(nazwa_pliku, encoding="utf-8"):
+#     if len(linia.strip()):
+#         liczba_niepustych += 1
+#     liczba_wszystkich += 1
+
+# print(f"{liczba_wszystkich=}\n{liczba_niepustych=}")
+
+
+# enumerate() - licznik przejśc przez petle
+# lista = "abcdefghij"
+# for i, literka in enumerate(lista, start=1):
+#     print(i, literka)
+
+
+# rozwiązanie z enumerate()
+
+# nazwa_pliku = "pan-tadeusz.txt"
+
+# liczba_niepustych = 0
+
+# for licznik, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
+#     if len(linia.strip()):
+#         liczba_niepustych += 1
+
+# print(f"{licznik=}\n{liczba_niepustych=}")
+
+
+# lista = "abcdefghij"
+# print(lista[5])
+
+
+### ZADANIE
+
+# Wypisz wszystkie NIEPUSTE linie z pliku main.py, które nie są komentarzem.
