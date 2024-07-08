@@ -319,3 +319,8 @@ zmienna = "ala ma kota"
 # print("range z start, stop i step:")
 # for licznik in range(10, 20, 3):
 #     print(licznik)
+
+
+### ZADANIE
+
+# Wypisz kolejne 10 potęg liczby 2, począwszy od 2 do potęgi 1
