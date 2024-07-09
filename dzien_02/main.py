@@ -310,4 +310,16 @@ lista = list(range(10))
 
 
 # list comp - lista list
+
+lista = [[potega, 2**potega] for potega in range(10)]
+print(lista)
+
 # wyświetlanie n-tego elementu z listy list
+for element in lista:
+    print(f"Dwa podniesione do potęgi {element[0]} to jest {element[1]}")
+
+
+lista_str = [
+    f"Dwa podniesione do potęgi {element[0]} to jest {element[1]}" for element in lista
+]
+print("\n".join(lista_str))
