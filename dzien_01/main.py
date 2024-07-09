@@ -591,7 +591,7 @@ ile_wystapien = 0
 for numer_linii, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
     if szukany_tekst in linia.lower():
         print(f"{numer_linii}: {linia}", end="")
-        ile_wystapien += 1
+        ile_wystapien += linia.lower().count(szukany_tekst)
 
 print(
     f"\n\n------\nW pliku '{nazwa_pliku}' ciąg '{szukany_tekst}' występuje {ile_wystapien} razy."
