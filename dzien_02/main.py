@@ -224,6 +224,7 @@ lista = list(range(10))
 ### ZADANIE
 
 # Utwórz listę znaków (poprzez list comprehention) z napisu
+# Spróbuj do listy dodawac wielkie litery.
 
 # wejście: "abcdefghijkl"
-# wyjście: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"]
+# wyjście: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]
