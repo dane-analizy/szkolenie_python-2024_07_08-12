@@ -186,3 +186,4 @@ lista = list(range(10))
 
 # Napisz program, który pobierze od użytkownika 10 liczb, zapamięta je (zapisze na liście),
 # a na koniec wyświetli całą listę pobranych wartości od końca.
+
