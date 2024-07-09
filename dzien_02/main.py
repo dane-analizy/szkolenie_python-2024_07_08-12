@@ -323,3 +323,4 @@ lista = list(range(10))
 #     f"Dwa podniesione do potęgi {element[0]} to jest {element[1]}" for element in lista
 # ]
 # print("\n".join(lista_str))
+
