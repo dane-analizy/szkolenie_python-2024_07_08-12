@@ -384,3 +384,35 @@ lista = list(range(10))
 
 # Wygeneruj listę 10 losowych liczb z zakresu 1-100. - przyda się random.randint()
 # Posortuj je w kolejności malejącej, a następnie wyświetl każdą liczbę w oddzielnej linii. - sorted(reverse=...)
+
+# import random
+
+# lista = sorted( [ random.randint(1,100) for _ in range(10)], reverse=True)
+# print("\n".join([str(elem) for elem in lista]))
+
+# for e in lista:
+#     print(e)
+
+# kawałek:
+# [str(elem) for elem in lista]
+# można zastąpić mapowaniem - dla każdego elementu 'lista' użyj funkcji 'str':
+# map(str, lista)
+
+
+# lista = [ [i, 10-i] for i in range(10)]
+# print(lista)
+
+# def f(element):
+#     return element[1]
+
+# lista_posortowana = sorted(lista, key=f)
+# print(lista_posortowana)
+
+# lista_posortowana_v2 = sorted(lista,
+#                               key=lambda el: el[0],
+#                               reverse=True)
+# print(lista_posortowana_v2)
+
+
+### Zadanie
+# Wczytaj dane z pliku bmi.csv. Posortuj je po wadze (index = 3) i wyświetl na konsoli, od najcięższego zawodnika.
