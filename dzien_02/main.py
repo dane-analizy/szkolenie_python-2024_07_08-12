@@ -228,3 +228,62 @@ lista = list(range(10))
 
 # wejście: "abcdefghijkl"
 # wyjście: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]
+
+# rozwiązanie zadania
+
+# lista = [literka.upper() for literka in "abcdefghijkl"]
+# print(lista)
+
+
+# for w forze - list comprehention
+
+# wersja pełna
+# lista = []
+# for i in range(10):
+#     for j in range(10):
+#         lista.append(f"{i=} {j=}")
+# print(lista)
+
+# wersja skrócona/lista składana
+# lista = [f"{i=} {j=}" for i in range(10) for j in range(10)]
+# print(lista)
+
+
+# # jak policzyc ile czasu zajmuje nasz kod?
+# import time
+
+# start_time = time.time() # zwraca ile sekund upłynęło od północy 1970-01-01
+# time.sleep(5)
+# end_time = time.time()
+# print(f"Minęło: {end_time-start_time} sekund")
+
+
+# czy list comprehention jest szybsze?
+# jak policzyc ile czasu zajmuje nasz kod?
+# import time
+
+# ILE_RAZY = 100_000_000
+
+# start_time = time.time()  # zwraca ile sekund upłynęło od północy 1970-01-01
+# lista = list()
+# lista = []
+# for i in range(ILE_RAZY):
+#     lista.append(i)
+# end_time = time.time()
+# print(f"Normalna pętla - minęło: {end_time-start_time} sekund")
+
+# start_time = time.time()  # zwraca ile sekund upłynęło od północy 1970-01-01
+# lista = [i for i in range(ILE_RAZY)]
+# end_time = time.time()
+# print(f"List comp - minęło: {end_time-start_time} sekund")
+
+
+# import random
+
+# random.choice([1,2,3])
+# random.random()
+
+### ZADANIE
+
+# Korzystając z funkcji  randint() z pakietu random w postaci listy składanej wygeneruj
+# 100 losowych liczb z zakresu 1-20 i wyświetl liste w konsoli.
