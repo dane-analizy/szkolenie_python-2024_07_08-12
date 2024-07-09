@@ -510,6 +510,23 @@ zmienna = "ala ma kota"
 # print(f"{licznik=}\n{liczba_niepustych=}")
 
 
+
+# nazwa_pliku = "PanTadeusz.txt"
+
+# licznik = 0
+# liczba_niepustych_enum = 0
+
+# for licznik, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
+#     if len(linia.strip()):
+#         liczba_niepustych_enum += 1
+#     licznik += 1
+
+# print(f"{licznik=}\n{liczba_niepustych_enum=}")
+
+
+
+
+
 # lista = "abcdefghij"
 # print(lista[5])
 
@@ -584,15 +601,23 @@ zmienna = "ala ma kota"
 # Wyszukiwarka powinna być nieczuła na wielkość liter.
 
 
-nazwa_pliku = input("Podaj nazwę pliku: ")
-szukany_tekst = input("Czego szukamy? ").lower()
-ile_wystapien = 0
+# nazwa_pliku = input("Podaj nazwę pliku: ")
+# szukany_tekst = input("Czego szukamy? ").lower()
+# ile_wystapien = 0
 
-for numer_linii, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
-    if szukany_tekst in linia.lower():
-        print(f"{numer_linii}: {linia}", end="")
-        ile_wystapien += linia.lower().count(szukany_tekst)
+# for numer_linii, linia in enumerate(open(nazwa_pliku, encoding="utf-8"), start=1):
+#     if szukany_tekst in linia.lower():
+#         print(f"{numer_linii}: {linia}", end="")
+#         ile_wystapien += linia.lower().count(szukany_tekst)
 
-print(
-    f"\n\n------\nW pliku '{nazwa_pliku}' ciąg '{szukany_tekst}' występuje {ile_wystapien} razy."
-)
+# print(
+#     f"\n\n------\nW pliku '{nazwa_pliku}' ciąg '{szukany_tekst}' występuje {ile_wystapien} razy."
+# )
+
+
+for iterator in range(10):
+    print(f"Iterator pierwszy: {iterator=}")
+    iterator_b = f"{round((iterator + 10)/3, 1)}"
+    print(f"Iterator drugi: {iterator_b=}")
+    print("====")
+
