@@ -440,3 +440,27 @@ lista = list(range(10))
 # BMI = waga / wzrost^2
 # wynik:
 # Józef Białobrzeski o wzroście 168 cm i wadze 86 kg ma współczynnik BMI = 46.36
+
+# wczytanie danych z pliku
+nazwa_pliku = "bmi.csv"
+enc = "utf-8"
+lista = [linia.strip().split(";") for linia in open(nazwa_pliku, encoding=enc)]
+# print(lista)
+
+# prosty ETL - zamiana stringów na liczby
+lista = [[el[0], el[1], float(el[2]), float(el[3])] for el in lista]
+# print(lista)
+
+# prosty ETL - wyliczenie BMI
+lista = [[el[0], el[1], el[2], el[3], el[3] / (el[2] / 100) ** 2] for el in lista]
+# print(lista)
+
+# posortowanie po BMI malejąco
+lista.sort(key=lambda el: el[4], reverse=True)
+# print(lista)
+
+# wyświetlenie wyniku:
+for elem in lista:
+    print(
+        f"{elem[0]} {elem[1]} o wzroscie {elem[2]} cm i wadze {elem[3]} kg ma współczynnik BMI = {elem[4]:.2f}"
+    )
