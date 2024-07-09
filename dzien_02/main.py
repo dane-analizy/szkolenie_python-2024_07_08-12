@@ -416,3 +416,17 @@ lista = list(range(10))
 
 ### Zadanie
 # Wczytaj dane z pliku bmi.csv. Posortuj je po wadze (index = 3) i wyświetl na konsoli, od najcięższego zawodnika.
+
+
+# rozwiązanie z ChatGTP - w pliku chatgpt.py
+
+# rozwiązanie ze szkolenia:
+
+# wczytujemy plik
+nazwa_pliku = "bmi.csv"
+enc = "utf-8"
+lista = [linia.strip().split(";") for linia in open(nazwa_pliku, encoding=enc)]
+
+# sortujemy listę list po 3 elemencie pojedynczej encji
+lista_posortowana = sorted(lista, key=lambda el: el[3], reverse=True)
+print(lista_posortowana)
