@@ -99,3 +99,12 @@ print("\033c", end="")
 
 # Napisz kod który umieści (append) w nowej liście 10 kolejnych (range()) potęg liczby 2.
 # Następnie przeiteruj po tej liście (for-em) i każdy z jej elementów wyświetl na konsoli w osobnej linii.
+
+lista = []
+# dodawanie elementów do listy
+for potega in range(10):
+    lista.append(2**potega)
+
+# wyświetlenie listy
+for elem in lista:
+    print(elem)
