@@ -507,3 +507,68 @@ lista = list(range(10))
 
 # # for e in map(str, [1, 2, 34.35, "wgtwtg"]):
 # #     print(e, type(e))
+
+
+# Co to są tuple / krotki?
+
+# # mutowalne = można zmieniac
+# lista  = [1, 2, 3]
+# lista[1] = 10
+# print(lista)
+
+# # niemutowalne = nie można zmieniac
+# krotka = (1, 2, 3)
+# krotka[1] = 100 # tu będzie błąd
+# print(krotka)
+
+# krotka = (1, 2, "3", "abaf", 124.123)
+# for el in krotka:
+#     print(el)
+
+# print(krotka[3:])
+# print(sorted(krotka, reverse=True, key=lambda e: str(e)))
+
+# lista_z_krotki = list(krotka)
+# print(krotka)
+# lista_z_krotki.append("3t3t")
+# print(lista_z_krotki)
+
+# lista = [1, 2, 3, 4]
+# print(lista)
+# krotka = tuple(lista)
+# print(krotka)
+
+# lista = [ i for i in range(10)]
+# print(lista)
+# krotka = (i for i in range(10))
+# print(krotka)
+
+# lista_krotek = [ (i, (2**i)-1) for i in range(10)]
+# print(lista_krotek)
+# print(set(lista_krotek))
+
+
+# zestawy / set / zbór
+# lista = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+# print(lista)
+# zbior = set( lista)
+# print(zbior)
+
+# # roznica zbiorow
+# print(zbior.difference(set( [2, 3, 4, 5, 6] )))
+
+# # cześc wspolna zbiorow
+# print(zbior.intersection(set([2, 3, 4, 5, 6])))
+
+# # suma zbiorow
+# print(zbior.union(set([2, 3, 4, 5, 6])))
+
+
+# l = (1, 1, 2, 2, 3, 3, 4, 4, 5, 5)
+# l_unikalna = list(set( l ))
+# print(l_unikalna)
+
+
+### ZADANIE
+
+# Wygenruj 100 losowych liczb z zakresu 1-20 i pokaż tylko te unikalne.
