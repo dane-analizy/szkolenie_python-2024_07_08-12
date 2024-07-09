@@ -187,3 +187,43 @@ lista = list(range(10))
 # Napisz program, który pobierze od użytkownika 10 liczb, zapamięta je (zapisze na liście),
 # a na koniec wyświetli całą listę pobranych wartości od końca.
 
+# rozwiązanie
+
+# lista = []
+# for _ in range(10):
+#     lista.append(input("Daj liczbę: "))
+
+# print(lista[::-1])
+
+
+# listy składane, list comprehention
+
+# lista = []
+# for i in range(10):
+#     wartosc = 2**i
+#     lista.append(wartosc)
+
+# print(lista)
+
+
+# # to samo z użyciem list comprehention:
+# lista2 = [2**i for i in range(10)]
+# print(lista2)
+
+
+# lista2 = [
+#     2**i
+#     for i in range(10)
+#     ]
+
+# napis (string) to lista znaków:
+# napis = "abcdefghijkl"
+# for literka in napis:
+#     print(literka)
+
+### ZADANIE
+
+# Utwórz listę znaków (poprzez list comprehention) z napisu
+
+# wejście: "abcdefghijkl"
+# wyjście: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"]
