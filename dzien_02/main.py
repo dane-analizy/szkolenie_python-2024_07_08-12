@@ -97,5 +97,5 @@ print("\033c", end="")
 
 ### ZDANIE
 
-# Napisz kod który umieści w nowej liście 10 kolejnych potęg liczby 2.
+# Napisz kod który umieści (append) w nowej liście 10 kolejnych (range()) potęg liczby 2.
 # Następnie przeiteruj po tej liście (for-em) i każdy z jej elementów wyświetl na konsoli w osobnej linii.
