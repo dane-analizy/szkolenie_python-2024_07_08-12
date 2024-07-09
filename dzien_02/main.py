@@ -423,10 +423,20 @@ lista = list(range(10))
 # rozwiązanie ze szkolenia:
 
 # wczytujemy plik
-nazwa_pliku = "bmi.csv"
-enc = "utf-8"
-lista = [linia.strip().split(";") for linia in open(nazwa_pliku, encoding=enc)]
+# nazwa_pliku = "bmi.csv"
+# enc = "utf-8"
+# lista = [linia.strip().split(";") for linia in open(nazwa_pliku, encoding=enc)]
 
-# sortujemy listę list po 3 elemencie pojedynczej encji
-lista_posortowana = sorted(lista, key=lambda el: el[3], reverse=True)
-print(lista_posortowana)
+# # sortujemy listę list po 3 elemencie pojedynczej encji
+# lista_posortowana = sorted(lista, key=lambda el: el[3], reverse=True)
+# print(lista_posortowana)
+
+
+### ZADANIE
+
+# Dla każdego wpisu w pliku bmi.csv wyświetl na konsoli informację o imieniu, nazwisku, wadze i wzroście oraz BMI.
+# Jak chcesz to posortuj po BMI to co wyświetlisz.
+#
+# BMI = waga / wzrost^2
+# wynik:
+# Józef Białobrzeski o wzroście 168 cm i wadze 86 kg ma współczynnik BMI = 46.36
