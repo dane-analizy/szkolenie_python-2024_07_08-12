@@ -324,4 +324,63 @@ lista = list(range(10))
 # ]
 # print("\n".join(lista_str))
 
+# nazwa_pliku = "bmi.csv"
+# enc="utf-8"
+# for linia in open(nazwa_pliku, encoding=enc):
+#     print(linia)
 
+
+# linia = "Zdzisław;Dyrman;193;95"
+# wynik = linia.split(";")
+# print(wynik)
+
+
+### ZADANIE
+
+# Załaduj do postaci listy list zawartość pliku bmi.csv
+
+# pożądany efekt:
+# lista = [
+#     ["Zdzisław", "Dyrman", "193", "95"],
+#     ["Marian", "Kowalski", "175", "83"]
+# ]
+
+
+# rozwiązanie - długie
+# nazwa_pliku = "bmi.csv"
+# enc = "utf-8"
+# lista = []
+# for linia in open(nazwa_pliku, encoding=enc):
+#     lista.append(linia.strip().split(";"))
+
+# print(lista)
+
+
+# rozwiązanie - krótkie
+# nazwa_pliku = "bmi.csv"
+# enc = "utf-8"
+# lista = [linia.strip().split(";") for linia in open(nazwa_pliku, encoding=enc)]
+# print(lista)
+
+
+# sortowanie list - in place
+# lista = [135, 136, 84, 14, 95, 234, 758, 25, 97, 46, 233]
+# lista.sort()
+# print(lista)
+
+# sortowanie
+# lista = [135, 136, 84, 14, 95, 234, 758, 25, 97, 46, 233]
+# lista_posortowana = sorted(lista)
+# print(lista)
+# print(lista_posortowana)
+
+# lista = [135, 136, 84, 14, 95, 234, 758, 25, 97, 46, 233]
+# lista_posortowana = sorted(lista, reverse=True)
+# print(lista)
+# print(lista_posortowana)
+
+
+### ZADANIE
+
+# Wygeneruj listę 10 losowych liczb z zakresu 1-100. - przyda się random.randint()
+# Posortuj je w kolejności malejącej, a następnie wyświetl każdą liczbę w oddzielnej linii. - sorted(reverse=...)
