@@ -100,11 +100,89 @@ print("\033c", end="")
 # Napisz kod który umieści (append) w nowej liście 10 kolejnych (range()) potęg liczby 2.
 # Następnie przeiteruj po tej liście (for-em) i każdy z jej elementów wyświetl na konsoli w osobnej linii.
 
-lista = []
-# dodawanie elementów do listy
-for potega in range(10):
-    lista.append(2**potega)
 
-# wyświetlenie listy
-for elem in lista:
-    print(elem)
+# rozwiązanie
+
+# lista = []
+# # dodawanie elementów do listy
+# for potega in range(10):
+#     lista.append(2**potega)
+
+# # wyświetlenie listy
+# for elem in lista:
+#     print(elem)
+
+# rzutowanie generatora range() na listę
+lista = list(range(10))
+# print(lista)
+
+# podmiana 1 wartości w liście
+# lista[4] = "123"
+# print(lista)
+
+# podmiana zakresu w liście
+# lista[5:8] = [0, 0]
+# print(lista)
+
+# lista.clear()
+# print(lista)
+
+# mutowalnośc i nie mutowalnosc
+# lista2 = lista # czy to jest kopia listy?
+# print("lista", lista)
+# print("lista2", lista2)
+
+# lista[4] = "to zmieniłem"
+# print("lista", lista)
+# print("lista2", lista2) # to samo co w liście 'lista'! czyli nie zrobiła się kopia - 2 zmienne zawieraja to samo
+
+# lista2 = lista.copy()
+# print("lista", lista)
+# print("lista2", lista2)
+
+# lista[4] = "to zmieniłem"
+# print("lista", lista)
+# print("lista2", lista2)
+
+# dodanie elementu przed indeksem
+# print(lista)
+# lista.insert(5, "abc")
+# print(lista)
+
+# dodanie elementu przed indeksem
+# print(lista)
+# if lista.count(6):
+#     lista.remove(6)
+# print(lista)
+
+# dodawanie listy za listą
+# l1 = [1, 2, 3]
+# l2 = [4, 5, 6]
+
+# print(l1 + l2)
+
+# lub - do l1 dopisane zostaną wartości z l2
+# l1.extend(l2)
+
+# lista = list(range(10)) + list(range(10)) + list(range(10))
+# print(lista)
+
+# if lista.count(6):
+#     lista.remove(6)
+# print(lista)
+
+# lista = list(range(10)) + list(range(10)) + list(range(10))
+
+# nowa_lista = []
+# for e in lista:
+#     if e == 6:
+#         continue
+#     nowa_lista.append(e)
+
+# print(nowa_lista)
+
+
+### Zadanie
+
+# Napisz program, który pobierze od użytkownika 10 liczb, zapamięta je (zapisze na liście),
+# a na koniec wyświetli całą listę pobranych wartości od końca.
