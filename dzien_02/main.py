@@ -441,26 +441,69 @@ lista = list(range(10))
 # wynik:
 # Józef Białobrzeski o wzroście 168 cm i wadze 86 kg ma współczynnik BMI = 46.36
 
-# wczytanie danych z pliku
-nazwa_pliku = "bmi.csv"
-enc = "utf-8"
-lista = [linia.strip().split(";") for linia in open(nazwa_pliku, encoding=enc)]
-# print(lista)
+# # wczytanie danych z pliku
+# nazwa_pliku = "bmi.csv"
+# enc = "utf-8"
+# lista = [
+#     linia.strip().split(";") for linia in open(nazwa_pliku, mode="r", encoding=enc)
+# ]
+# # print(lista)
 
-# prosty ETL - zamiana stringów na liczby
-lista = [[el[0], el[1], float(el[2]), float(el[3])] for el in lista]
-# print(lista)
+# # prosty ETL - zamiana stringów na liczby
+# lista = [[el[0], el[1], float(el[2]), float(el[3])] for el in lista]
+# # print(lista)
 
-# prosty ETL - wyliczenie BMI
-lista = [[el[0], el[1], el[2], el[3], el[3] / (el[2] / 100) ** 2] for el in lista]
-# print(lista)
+# # prosty ETL - wyliczenie BMI
+# lista = [[el[0], el[1], el[2], el[3], el[3] / (el[2] / 100) ** 2] for el in lista]
+# # print(lista)
 
-# posortowanie po BMI malejąco
-lista.sort(key=lambda el: el[4], reverse=True)
-# print(lista)
+# # posortowanie po BMI malejąco
+# lista.sort(key=lambda el: el[4], reverse=True)
+# # print(lista)
 
-# wyświetlenie wyniku:
-for elem in lista:
-    print(
-        f"{elem[0]} {elem[1]} o wzroscie {elem[2]} cm i wadze {elem[3]} kg ma współczynnik BMI = {elem[4]:.2f}"
-    )
+# # wyświetlenie wyniku:
+# # for elem in lista:
+# #     print(
+# #         f"{elem[0]} {elem[1]} o wzroscie {elem[2]} cm i wadze {elem[3]} kg ma współczynnik BMI = {elem[4]:.2f}"
+# #     )
+
+
+# # for elem in lista:
+# #     BMI = round((float(elem[3]) / pow((float(elem[2]) / 100), 2)), 2)
+# #     print(
+# #         f"{elem[0]} {elem[1]} o wzroscie {elem[2]} cm i wadze {elem[3]} kg ma współczynnik BMI = {BMI}"
+# #     )
+
+
+# # zapiszmy wynik do pliku wyniki_bmi.csv
+# nazwa_pliku_wyniki = "wyniki_bmi.csv"
+# separator = ";"
+
+# # # otwieramy plik
+# # plik = open(nazwa_pliku_wyniki, "w", encoding=enc)
+
+# # # robimy coś z plikiem
+
+# # # zamykamy plik
+# # plik.close()
+
+# # scalenie do jednego stringu każdek z linii z "dużej listy"
+# lista_wynikowa = [separator.join(map(str, el)) for el in lista]
+
+# # # context manager - sam zadba o zamknięcie pliku; zapis całości jednym strzałem
+# with open(nazwa_pliku_wyniki, "w", encoding=enc) as plik:
+#     linia_zapis = "\n".join(lista_wynikowa)
+#     print(f"Zapisuję: {linia_zapis}")
+#     plik.write(linia_zapis)
+
+
+# # context manager - sam zadba o zamknięcie pliku; zapis całości po jednej linii
+# with open(nazwa_pliku_wyniki, "w", encoding=enc) as plik:
+#     for linia_zapis in lista_wynikowa:
+#         print(f"Zapisuję: {linia_zapis}")
+#         plik.write(linia_zapis + "\n")
+
+# # print("|".join([1, 2, 34.35, "wgtwtg"]))
+
+# # for e in map(str, [1, 2, 34.35, "wgtwtg"]):
+# #     print(e, type(e))
