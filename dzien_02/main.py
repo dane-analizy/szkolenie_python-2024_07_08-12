@@ -287,3 +287,27 @@ lista = list(range(10))
 
 # Korzystając z funkcji  randint() z pakietu random w postaci listy składanej wygeneruj
 # 100 losowych liczb z zakresu 1-20 i wyświetl liste w konsoli.
+
+
+# rozwiązanie:
+# import random
+
+# lista = [random.randint(1, 20) for _ in range(100)]
+# print(lista)
+
+
+# if w list comprehention
+
+# lista = []
+# for potega in range(10):
+#     if potega % 2:
+#         continue
+#     lista.append(2**potega)
+# print(lista)
+
+# lista2 = [2**potega for potega in range(10) if potega % 2 == 0]
+# print(lista2)
+
+
+# list comp - lista list
+# wyświetlanie n-tego elementu z listy list
