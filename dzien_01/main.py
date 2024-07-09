@@ -510,7 +510,6 @@ zmienna = "ala ma kota"
 # print(f"{licznik=}\n{liczba_niepustych=}")
 
 
-
 # nazwa_pliku = "PanTadeusz.txt"
 
 # licznik = 0
@@ -522,9 +521,6 @@ zmienna = "ala ma kota"
 #     licznik += 1
 
 # print(f"{licznik=}\n{liczba_niepustych_enum=}")
-
-
-
 
 
 # lista = "abcdefghij"
@@ -620,4 +616,3 @@ for iterator in range(10):
     iterator_b = f"{round((iterator + 10)/3, 1)}"
     print(f"Iterator drugi: {iterator_b=}")
     print("====")
-
