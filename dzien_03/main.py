@@ -257,19 +257,35 @@ print("\033c", end="")
 #     json.dump(config, f)
 
 
-
 # wczytanie konfiguracji z pliku JSON
-nazwa_pliku_config = "konfiguracja.json"
-enc = "utf-8"
+# nazwa_pliku_config = "konfiguracja.json"
+# enc = "utf-8"
 
-# zapis słownika do pliku JSON
-import json
+# # zapis słownika do pliku JSON
+# import json
 
-with open(nazwa_pliku_config, "r", encoding=enc) as f:
-    config = json.load(f)
+# with open(nazwa_pliku_config, "r", encoding=enc) as f:
+#     config = json.load(f)
 
-print(config)
-for k,v in config.items():
-    print(k, v, type(v))
+# print(config)
+# for k,v in config.items():
+#     print(k, v, type(v))
+
+
+d = {
+    "login": "jakis_login",
+    "haslo": "tajneHas\u0142o",
+    "baza_danych": 12415,
+    "nowe_parametry": 45.678,
+    "dzien": "środa",
+    "slownik": {"klucza": "a", "kluczb": 124},
+}
+
+# co_zwraca = json.dumps(d)
+# print(type(co_zwraca))
+# print(co_zwraca)
+
+# slownik -> json.dumps(slownik) -> string z danymi w formie json -> json.dumps(plik) -> string zapisany do pliku
+
 
 # bmi na slownikach + zapis
