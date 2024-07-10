@@ -184,14 +184,37 @@ print("\033c", end="")
 # print(slownik.get("klucz_slownik", {}).get("klucz_jeden", "nie ma tej wartości"))
 
 
-
 ### ZADANIE
 
 # Utwórz plik konfiguracja.txt, który będzie konfiguracją w postaci "klucz=wartość".
 # Wczytaj konfigurację do słownika. Wypisz cały słownik.
 
 
+# rozwiązanie:
 
+# # wczytanie - open()
+# nazwa_pliku = "konfiguracja.txt"
+# enc = "utf-8"
+# sep = "="
+
+# # rozdzielenie linii - split()
+# zawartosc_pliku = [
+#     linia.strip().split(sep) for linia in open(nazwa_pliku, "r", encoding=enc)
+# ]
+
+# print(zawartosc_pliku)
+
+
+# # budowa słownika
+# config = {}
+# for wiersz in zawartosc_pliku:
+#     config[wiersz[0]] = wiersz[1]
+
+# print(config)
+
+# # wypisanie config.items() w pętli
+# for k, v in config.items():
+#     print(f"{k}: '{v}'")
 
 
 # cwieczenie ze slowniak
