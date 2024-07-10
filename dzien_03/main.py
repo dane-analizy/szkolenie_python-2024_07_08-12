@@ -182,3 +182,8 @@ print("\033c", end="")
 # # ale:
 # slownik["klucz_slownik"] = 123
 # print(slownik.get("klucz_slownik", {}).get("klucz_jeden", "nie ma tej wartości"))
+
+
+# cwieczenie ze slowniak
+# jsony - zapis i odczyt
+# bmi na slownikach + zapis
