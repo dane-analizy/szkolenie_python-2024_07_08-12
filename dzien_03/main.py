@@ -167,3 +167,18 @@ print("\033c", end="")
 
 # for klucz, wartosc in slownik.items():
 #     print(f"{klucz=} => {wartosc=}")
+
+
+# # sieganie do zagniezdzonego elementu w slowniku, ktory jest w slowniku
+# print(slownik["klucz_slownik"])
+
+# # bezposrednio, ufamy że mamy odpowiednie klucze
+# print(slownik["klucz_slownik"]["klucz_jeden"])
+
+# # pewniej i raczej bez bledu:
+# print(slownik.get("klucz_slownik", {}).get("klucz_jeden", "nie ma tej wartości"))
+
+
+# # ale:
+# slownik["klucz_slownik"] = 123
+# print(slownik.get("klucz_slownik", {}).get("klucz_jeden", "nie ma tej wartości"))
