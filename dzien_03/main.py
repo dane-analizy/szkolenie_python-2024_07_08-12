@@ -381,35 +381,101 @@ print("\033c", end="")
 
 
 # rozwiązanie:
+# nazwa_pliku = "pan-tadeusz.txt"
+# enc = "utf-8"
+
+# zakazane_znaki = ".,?!/()-"
+
+# liczba_wystapien = {}
+
+# for linia in open(nazwa_pliku, "r", encoding=enc):
+#     # wyczyczenie całej linii z nieporządanych znakow
+#     linia_czysta = linia
+#     for znak_zakazany in zakazane_znaki:
+#         linia_czysta = linia_czysta.replace(znak_zakazany, " ")
+
+#     # rozbicie linii na slowa
+#     slowa_z_linii = linia_czysta.strip().split(" ")
+
+#     # dla kazdego ze slow - dodanie do slownika/zwiekszenie o 1 licznika wystapien
+#     for slowo in slowa_z_linii:
+#         # tylko "całe" slowa, dłuższe niż 3 znaki
+#         if len(slowo) <= 3:
+#             continue
+
+#         # klucz mala litera
+#         klucz = slowo.lower()
+#         # czy juz bylo w slowniku?
+#         if klucz in liczba_wystapien.keys():
+#             liczba_wystapien[klucz] = liczba_wystapien[klucz] + 1
+#         else:
+#             liczba_wystapien[klucz] = 1
+
+# # print(liczba_wystapien)
+
+
+# # posorotwanie słownika - po kluczach (= słowach w tym przypadku) -> dostajemy listę krotek
+# # liczba_wystapien_sorted = sorted(liczba_wystapien.items(), key=lambda el: el[0])
+
+# # posorotwanie słownika - po wartościach (= liczbie wystąpień w tym przypadku) -> dostajemy listę krotek
+# liczba_wystapien_sorted = sorted(liczba_wystapien.items(), key=lambda el: el[1])
+
+
+# # rzutowanie listy krotek na słownik - wersja A
+# # liczba_wystapien_sorted = dict(liczba_wystapien_sorted)
+
+# # rzutowanie listy krotek na słownik - wersja B
+# liczba_wystapien_sorted = {k[0]: k[1] for k in liczba_wystapien_sorted}
+
+# print(liczba_wystapien_sorted)
+
+# rozwiązanie inne:
+# nazwa_pliku = "pan-tadeusz.txt"
+# enc = "utf-8"
+# zakazane_znaki = ".,?!/()-\n"
+
+# # wczytanie całego tekstu
+# caly_tekst = open(nazwa_pliku, "r", encoding=enc).read()
+# caly_tekst = caly_tekst.lower()
+
+# # oczyszczenie z nieporzadanych znakow
+# for znak_zakazany in zakazane_znaki:
+#     caly_tekst = caly_tekst.replace(znak_zakazany, " ")
+
+# lista_unikalnych_slow = set(caly_tekst.split(" "))
+
+# liczba_wystapien = {}
+# for slowo in lista_unikalnych_slow:
+#     if len(slowo) <= 3:
+#         continue
+#     ile_razy_wystepuje = caly_tekst.count(slowo)
+#     liczba_wystapien[slowo] = ile_razy_wystepuje
+
+# # posorotwanie słownika - po wartościach (= liczbie wystąpień w tym przypadku) -> dostajemy listę krotek
+# liczba_wystapien_sorted = sorted(liczba_wystapien.items(), key=lambda el: el[1])
+
+# # rzutowanie listy krotek na słownik - wersja B
+# liczba_wystapien_sorted = {k[0]: k[1] for k in liczba_wystapien_sorted}
+
+# print(liczba_wystapien_sorted)
+
+from collections import Counter
+
 nazwa_pliku = "pan-tadeusz.txt"
 enc = "utf-8"
+zakazane_znaki = ".,?!/()-\n"
 
-zakazane_znaki = ".,?!/()-"
+# wczytanie całego tekstu
+caly_tekst = open(nazwa_pliku, "r", encoding=enc).read()
+caly_tekst = caly_tekst.lower()
 
-liczba_wystapien = {}
+# oczyszczenie z nieporzadanych znakow
+for znak_zakazany in zakazane_znaki:
+    caly_tekst = caly_tekst.replace(znak_zakazany, " ")
 
-for linia in open(nazwa_pliku, "r", encoding=enc):
 
-    # wyczyczenie całej linii z nieporządanych znakow
-    linia_czysta = linia
-    for znak_zakazany in zakazane_znaki:
-        linia_czysta = linia_czysta.replace(znak_zakazany, " ")
+caly_tekst_rozdzielony = caly_tekst.split(" ")
+caly_tekst_rozdzielony = [slowo for slowo in caly_tekst_rozdzielony if len(slowo) > 3]
 
-    # rozbicie linii na slowa
-    slowa_z_linii = linia_czysta.strip().split(" ")
-    
-    # dla kazdego ze slow - dodanie do slownika/zwiekszenie o 1 licznika wystapien
-    for slowo in slowa_z_linii:
-        # tylko "całe" slowa
-        if len(slowo) == 0:
-            continue
-        
-        # klucz mala litera
-        klucz = slowo.lower()
-        # czy juz bylo w slowniku?
-        if klucz in liczba_wystapien.keys():
-            liczba_wystapien[klucz] = liczba_wystapien[klucz] + 1
-        else:
-            liczba_wystapien[klucz] = 1
-
-print(liczba_wystapien)
+licznik = Counter(caly_tekst_rozdzielony)
+print(dict(licznik.most_common(50)))  # 50 najpopularniejszych słów w Panu Tadeuszu
