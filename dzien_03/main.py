@@ -530,22 +530,28 @@ print("\033c", end="")
 
 # instalacja pakietu dodatkowego:
 # pip install pyyaml
-import yaml
-config_file = "konfiguracja.yaml"
-config_file_zapis = "konfiguracja_kopia.yaml"
+# import yaml
+# config_file = "konfiguracja.yaml"
+# config_file_zapis = "konfiguracja_kopia.yaml"
 
 
-# wczytanie konfiguracji z yaml
-with open(config_file, "r", encoding="utf-8") as f:
-    config = yaml.safe_load(f)
+# # wczytanie konfiguracji z yaml
+# with open(config_file, "r", encoding="utf-8") as f:
+#     config = yaml.safe_load(f)
 
-print(config)
+# print(config)
 
 
-config['dodatek'] = {"a": 1, "b": "tekst", "c": ["lista", "naszych", "tekstów"]}
-# zapis konfiguracji
-with open(config_file_zapis, "w", encoding="utf-8") as f:
-    yaml.safe_dump(config, f)
+# config['dodatek'] = {"a": 1, "b": "tekst", "c": ["lista", "naszych", "tekstów"]}
+# # zapis konfiguracji
+# with open(config_file_zapis, "w", encoding="utf-8") as f:
+#     yaml.safe_dump(config, f)
+
+
+### ZADANIE
+
+# Przygotuj sobie dowolny plik YAML. Wczytaj go do pamięci i zapisz jako plik JSON.
+
 
 # Faker
 # Anglia - Holandia
