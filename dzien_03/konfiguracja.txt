@@ -1,0 +1,3 @@
+login=jakis_login
+haslo=tajneHasło
+baza_danych=12415

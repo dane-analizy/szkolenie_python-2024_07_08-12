@@ -184,6 +184,16 @@ print("\033c", end="")
 # print(slownik.get("klucz_slownik", {}).get("klucz_jeden", "nie ma tej wartości"))
 
 
+
+### ZADANIE
+
+# Utwórz plik konfiguracja.txt, który będzie konfiguracją w postaci "klucz=wartość".
+# Wczytaj konfigurację do słownika. Wypisz cały słownik.
+
+
+
+
+
 # cwieczenie ze slowniak
 # jsony - zapis i odczyt
 # bmi na slownikach + zapis
