@@ -378,3 +378,38 @@ print("\033c", end="")
 # utworzyc slownik liczba_wystapien = {}
 # linia po linii pobrac tekst, rozdzielic na slowa, zrobic .lower() i użyc jako klucza
 # jesli słowo istniało (d.keys(), d.get()) - zwiekszamy licznik o 1, jesli nie - tworzymy nowe
+
+
+# rozwiązanie:
+nazwa_pliku = "pan-tadeusz.txt"
+enc = "utf-8"
+
+zakazane_znaki = ".,?!/()-"
+
+liczba_wystapien = {}
+
+for linia in open(nazwa_pliku, "r", encoding=enc):
+
+    # wyczyczenie całej linii z nieporządanych znakow
+    linia_czysta = linia
+    for znak_zakazany in zakazane_znaki:
+        linia_czysta = linia_czysta.replace(znak_zakazany, " ")
+
+    # rozbicie linii na slowa
+    slowa_z_linii = linia_czysta.strip().split(" ")
+    
+    # dla kazdego ze slow - dodanie do slownika/zwiekszenie o 1 licznika wystapien
+    for slowo in slowa_z_linii:
+        # tylko "całe" slowa
+        if len(slowo) == 0:
+            continue
+        
+        # klucz mala litera
+        klucz = slowo.lower()
+        # czy juz bylo w slowniku?
+        if klucz in liczba_wystapien.keys():
+            liczba_wystapien[klucz] = liczba_wystapien[klucz] + 1
+        else:
+            liczba_wystapien[klucz] = 1
+
+print(liczba_wystapien)
