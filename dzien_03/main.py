@@ -217,6 +217,26 @@ print("\033c", end="")
 #     print(f"{k}: '{v}'")
 
 
+# rozwiazanie w krotszej formie:
+# wczytanie - open()
+# nazwa_pliku = "konfiguracja.txt"
+# enc = "utf-8"
+# sep = "="
+
+# # rozdzielenie linii - split()
+# zawartosc_pliku = [
+#     linia.strip().split(sep) for linia in open(nazwa_pliku, "r", encoding=enc)
+# ]
+
+
+# # budowa słownika - dict comprehention
+# config = {wiersz[0]: wiersz[1] for wiersz in zawartosc_pliku}
+
+# # wypisanie config.items() w pętli
+# for k, v in config.items():
+#     print(f"{k}: '{v}'")
+
+
 # cwieczenie ze slowniak
 # jsony - zapis i odczyt
 # bmi na slownikach + zapis

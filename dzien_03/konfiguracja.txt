@@ -1,3 +1,4 @@
 login=jakis_login
 haslo=tajneHasło
 baza_danych=12415
+nowe_parametry=12415315.135135
