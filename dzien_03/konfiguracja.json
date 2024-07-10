@@ -1,0 +1,11 @@
+{
+    "login": "jakis_login",
+    "haslo": "tajneHas\u0142o",
+    "baza_danych": 12415,
+    "nowe_parametry": 45.678,
+    "dzien": "środa",
+    "slownik": {
+        "klucza": "a",
+        "kluczb": 124
+    }
+}

@@ -237,6 +237,39 @@ print("\033c", end="")
 #     print(f"{k}: '{v}'")
 
 
-# cwieczenie ze slowniak
 # jsony - zapis i odczyt
+
+# # wczytanie konfiguracji
+# nazwa_pliku = "konfiguracja.txt"
+# nazwa_pliku_config = "konfiguracja.json"
+# enc = "utf-8"
+# sep = "="
+# config = {
+#     linia.strip().split(sep)[0]: linia.strip().split(sep)[1]
+#     for linia in open(nazwa_pliku, "r", encoding=enc)
+# }
+# print(config)
+
+# # zapis słownika do pliku JSON
+# import json
+
+# with open(nazwa_pliku_config, "w", encoding=enc) as f:
+#     json.dump(config, f)
+
+
+
+# wczytanie konfiguracji z pliku JSON
+nazwa_pliku_config = "konfiguracja.json"
+enc = "utf-8"
+
+# zapis słownika do pliku JSON
+import json
+
+with open(nazwa_pliku_config, "r", encoding=enc) as f:
+    config = json.load(f)
+
+print(config)
+for k,v in config.items():
+    print(k, v, type(v))
+
 # bmi na slownikach + zapis
