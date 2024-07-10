@@ -288,4 +288,51 @@ d = {
 # slownik -> json.dumps(slownik) -> string z danymi w formie json -> json.dumps(plik) -> string zapisany do pliku
 
 
-# bmi na slownikach + zapis
+# bmi na slownikach + zapis do jsona
+
+### ZADANIE
+
+# Wczytaj dane z pliku bmi.csv i utwórz z nich słownik.
+# Kluczem niech będzie krotka stworzona z imienia i nazwiska,
+# a wartością lista stworzona z wagi i wzrostu.
+# Wyświetl kolejne elementy słownika w konsoli.
+# Zapisz słownik do pliku JSON - np. bmi.json
+
+
+# open("bmi.csv") + split
+# d = {
+#       (imie, nazwisko) : [waga, wzrost ],
+#       (imie, nazwisko) : [waga, wzrost ]
+#     }
+# json.dump(d, plik.json)
+
+# rozwiązanie długie
+# nazwa_pliku = "bmi.csv"
+# nazwa_pliku_bmi = "bmi.json"
+# enc, sep = ("utf-8", ";")
+
+# zawartosc_pliku = [
+#     linia.strip().split(sep) for linia in open(nazwa_pliku, "r", encoding=enc)
+# ]
+
+# print(zawartosc_pliku)
+
+# slownik = {}
+# for wiersz in zawartosc_pliku:
+    
+#     # # oryginalnie:
+#     # slownik[wiersz[0], wiersz[1]] = [wiersz[2], wiersz[3]]
+#     # # dodanie explicite że klucz jest krotką:
+#     # slownik[(wiersz[0], wiersz[1])] = [wiersz[2], wiersz[3]]
+#     # pakiet json nie umie zserializowac klucza-krotki, więc robimy string:
+#     slownik[f"{wiersz[0]}-{wiersz[1]}"] = [wiersz[2], wiersz[3]]
+
+# print(slownik)
+
+# import json
+
+# with open(nazwa_pliku_bmi, "w", encoding=enc) as f:
+#     json.dump(slownik, f)
+    
+    
+# rozwiązanie krótkie
