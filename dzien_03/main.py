@@ -272,14 +272,14 @@ print("\033c", end="")
 #     print(k, v, type(v))
 
 
-d = {
-    "login": "jakis_login",
-    "haslo": "tajneHas\u0142o",
-    "baza_danych": 12415,
-    "nowe_parametry": 45.678,
-    "dzien": "środa",
-    "slownik": {"klucza": "a", "kluczb": 124},
-}
+# d = {
+#     "login": "jakis_login",
+#     "haslo": "tajneHas\u0142o",
+#     "baza_danych": 12415,
+#     "nowe_parametry": 45.678,
+#     "dzien": "środa",
+#     "slownik": {"klucza": "a", "kluczb": 124},
+# }
 
 # co_zwraca = json.dumps(d)
 # print(type(co_zwraca))
@@ -319,7 +319,7 @@ d = {
 
 # slownik = {}
 # for wiersz in zawartosc_pliku:
-    
+
 #     # # oryginalnie:
 #     # slownik[wiersz[0], wiersz[1]] = [wiersz[2], wiersz[3]]
 #     # # dodanie explicite że klucz jest krotką:
@@ -333,6 +333,38 @@ d = {
 
 # with open(nazwa_pliku_bmi, "w", encoding=enc) as f:
 #     json.dump(slownik, f)
-    
-    
+
+
 # rozwiązanie krótkie
+# nazwa_pliku = "bmi.csv"
+# nazwa_pliku_bmi = "bmi.json"
+# enc, sep = ("utf-8", ";")
+
+# zawartosc_pliku = [
+#     linia.strip().split(sep) for linia in open(nazwa_pliku, "r", encoding=enc)
+# ]
+
+# # slownik = {}
+# # for wiersz in zawartosc_pliku:
+# #     slownik[f"{wiersz[0]}-{wiersz[1]}"] = [wiersz[2], wiersz[3]]
+
+# slownik = {
+#     f"{wiersz[0]}-{wiersz[1]}": [wiersz[2], wiersz[3]] for wiersz in zawartosc_pliku
+# }
+# print(slownik)
+
+
+# jeszcze krótsze - ale czy czytelniejsze?
+# nazwa_pliku = "bmi.csv"
+# nazwa_pliku_bmi = "bmi.json"
+# enc, sep = ("utf-8", ";")
+
+# slownik = {
+#     f"{linia.strip().split(sep)[0]}-{linia.strip().split(sep)[1]}": [
+#         linia.strip().split(sep)[2],
+#         linia.strip().split(sep)[3],
+#     ]
+#     for linia in open(nazwa_pliku, "r", encoding=enc)
+# }
+
+# print(slownik)
