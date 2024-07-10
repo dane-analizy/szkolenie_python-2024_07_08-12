@@ -1,0 +1,13 @@
+baza_danych: 12415
+dodatek:
+  a: 1
+  b: tekst
+  c:
+  - lista
+  - naszych
+  - "tekst\xF3w"
+float_w_ciapkach: '567.89'
+haslo: "tajneHas\u0142o "
+login: jakis_login
+nowe_parametry: 123.456
+string_ze_spacjami: jakies nasze zdanie

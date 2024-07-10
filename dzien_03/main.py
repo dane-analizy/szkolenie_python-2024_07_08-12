@@ -459,23 +459,93 @@ print("\033c", end="")
 
 # print(liczba_wystapien_sorted)
 
-from collections import Counter
+# from collections import Counter
 
-nazwa_pliku = "pan-tadeusz.txt"
-enc = "utf-8"
-zakazane_znaki = ".,?!/()-\n"
+# nazwa_pliku = "pan-tadeusz.txt"
+# enc = "utf-8"
+# zakazane_znaki = ".,?!/()-\n"
 
-# wczytanie całego tekstu
-caly_tekst = open(nazwa_pliku, "r", encoding=enc).read()
-caly_tekst = caly_tekst.lower()
+# # wczytanie całego tekstu
+# caly_tekst = open(nazwa_pliku, "r", encoding=enc).read()
+# caly_tekst = caly_tekst.lower()
 
-# oczyszczenie z nieporzadanych znakow
-for znak_zakazany in zakazane_znaki:
-    caly_tekst = caly_tekst.replace(znak_zakazany, " ")
+# # oczyszczenie z nieporzadanych znakow
+# for znak_zakazany in zakazane_znaki:
+#     caly_tekst = caly_tekst.replace(znak_zakazany, " ")
 
 
-caly_tekst_rozdzielony = caly_tekst.split(" ")
-caly_tekst_rozdzielony = [slowo for slowo in caly_tekst_rozdzielony if len(slowo) > 3]
+# caly_tekst_rozdzielony = caly_tekst.split(" ")
+# caly_tekst_rozdzielony = [slowo for slowo in caly_tekst_rozdzielony if len(slowo) > 3]
 
-licznik = Counter(caly_tekst_rozdzielony)
-print(dict(licznik.most_common(50)))  # 50 najpopularniejszych słów w Panu Tadeuszu
+# licznik = Counter(caly_tekst_rozdzielony)
+# print(dict(licznik.most_common(50)))  # 50 najpopularniejszych słów w Panu Tadeuszu
+
+
+# co to map()
+# dla każdego elementu iterabla wywołaj funkcję 'funkcja' i do listy przekaż wynik
+# lista = map(funkcja, iterable)
+# lista = [ funkcja(element) for element in iterable]
+
+
+# co to filter()
+# dla każdego elementu iterabla wywołaj funkcję 'funkcja' i jeśli wynik jests True to do listy przekaż element
+# lista = filter(funkcja, iterable)
+# lista = [element for element in iterable if funkcja(element) == True]
+# caly_tekst_rozdzielony =  filter(lambda slowo: len(slowo) > 3, caly_tekst_rozdzielony)
+
+
+# rozpakowywanie list i słowników
+
+# a, b = [1, 2]
+# print(a)
+# print(b)
+
+# listaa = ["abc", "def", "ghi"]
+# listab = ["123", "456", "789"]
+
+# print(*listaa)
+
+# lista_c = [*listaa, *listab]  # łącznie list po staremu (do Python 3.5)
+# lista_c = listaa + listab  # łącznie list po nowemu (od Python 3.6)
+# print(lista_c)
+
+# d1 = {"a": 123, "b":567}
+# d2 = {"c": "---123", "d": "---567", "a": "zamianka"}
+
+# # scalanie slowników po nowemu (od Python 3.10):
+# d_wynik = d1.copy()
+# d_wynik.update(d2)
+
+# # d_wynik = d1 | d2  # scalanie slowników po nowemu (od Python 3.10)
+# print(d_wynik)
+
+# d2 = {"c": "---123", "d": "---567", "a": "zamianka"}
+# print(**d2) => print(c="---123", d="---567", a="zamianka"}
+
+
+# yaml
+# konfiguracja w różnych typach plików https://blog.prokulski.science/2021/03/29/pliki-konfiguracyjne-python-r/
+
+# skąd brac pakiety dodatkowe? https://pypi.org/
+
+# instalacja pakietu dodatkowego:
+# pip install pyyaml
+import yaml
+config_file = "konfiguracja.yaml"
+config_file_zapis = "konfiguracja_kopia.yaml"
+
+
+# wczytanie konfiguracji z yaml
+with open(config_file, "r", encoding="utf-8") as f:
+    config = yaml.safe_load(f)
+
+print(config)
+
+
+config['dodatek'] = {"a": 1, "b": "tekst", "c": ["lista", "naszych", "tekstów"]}
+# zapis konfiguracji
+with open(config_file_zapis, "w", encoding="utf-8") as f:
+    yaml.safe_dump(config, f)
+
+# Faker
+# Anglia - Holandia
