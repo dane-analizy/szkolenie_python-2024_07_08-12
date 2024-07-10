@@ -551,7 +551,33 @@ print("\033c", end="")
 ### ZADANIE
 
 # Przygotuj sobie dowolny plik YAML. Wczytaj go do pamięci i zapisz jako plik JSON.
+# rozwiązanie = plik yaml_to_json.py
 
 
-# Faker
+# Faker - pakiet do tworzenia zmyślonych danych
+
+# instalujemy pakiet: pip install faker
+
+# from faker import Faker
+
+
+# fake = Faker("pl")
+# print(fake.birth_number())
+# print(fake.name())
+
+### ZADANIE
+
+# Korzystając z pakietu Faker wygeneruj plik CSV zawierający 10 tysięcy rekordów zawierających:
+# id będące koleją liczbą, imię, nazwisko, nazwa firmy, email, telefon, miasto.
+
+# stwórz listę słowników, gdzie każdy element listy jest pojedynczym rekordem
+# { "id": 1,
+#  "imie": "Łukasz",
+#  "nazwisko": "Prokulski",
+#  "firma": "Dane i Analizy",
+#  "email": "kontakt@prokulski.science",
+#  "telefon": "510 xxx xxx",
+#  "miasto": "Warszawa"}
+
+
 # Anglia - Holandia
