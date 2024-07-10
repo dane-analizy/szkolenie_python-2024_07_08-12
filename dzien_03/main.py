@@ -368,3 +368,13 @@ print("\033c", end="")
 # }
 
 # print(slownik)
+
+
+### ZADANIE
+
+# Policz ile razy występują poszczególne słowa w tekście "Pana Tadeusza".
+# Użyj słowników - kluczem niech będzie słowo zapisane małymi literami, a wartością - liczba jego wystąpień.
+
+# utworzyc slownik liczba_wystapien = {}
+# linia po linii pobrac tekst, rozdzielic na slowa, zrobic .lower() i użyc jako klucza
+# jesli słowo istniało (d.keys(), d.get()) - zwiekszamy licznik o 1, jesli nie - tworzymy nowe
