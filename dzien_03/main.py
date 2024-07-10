@@ -580,50 +580,50 @@ print("\033c", end="")
 #  "miasto": "Warszawa"}
 
 
-import json
-import random
+# import json
+# import random
 
-import pandas as pd
-from faker import Faker
+# import pandas as pd
+# from faker import Faker
 
-fake = Faker("pl_PL")
-csv_file_pandas = "data_faker_pandas.csv"
-xlsx_file_pandas = "data_faker_pandas.xlsx"
-csv_file = "data_faker.csv"
-json_file = "data_faker.json"
-enc = "utf-8"
+# fake = Faker("pl_PL")
+# csv_file_pandas = "data_faker_pandas.csv"
+# xlsx_file_pandas = "data_faker_pandas.xlsx"
+# csv_file = "data_faker.csv"
+# json_file = "data_faker.json"
+# enc = "utf-8"
 
-fake_records = [
-    {
-        "id": fake.uuid4(),
-        "imie": fake.first_name(),
-        "nazwisko": fake.last_name(),
-        "nazwa_firmy": fake.company(),
-        "email": fake.email(),
-        "telefon": fake.phone_number(),
-        "miasto": fake.city(),
-        "wiek": random.randint(18, 70),
-    }
-    for _ in range(10_000)
-]
+# fake_records = [
+#     {
+#         "id": fake.uuid4(),
+#         "imie": fake.first_name(),
+#         "nazwisko": fake.last_name(),
+#         "nazwa_firmy": fake.company(),
+#         "email": fake.email(),
+#         "telefon": fake.phone_number(),
+#         "miasto": fake.city(),
+#         "wiek": random.randint(18, 70),
+#     }
+#     for _ in range(10_000)
+# ]
 
-with open(json_file, "w", encoding=enc) as f:
-    json.dump(fake_records, f)
+# with open(json_file, "w", encoding=enc) as f:
+#     json.dump(fake_records, f)
 
-with open(csv_file, "w", encoding=enc) as f:
-    for r in fake_records:
-        linia = ";".join(map(str, r.values()))
-        f.write(linia + "\n")
+# with open(csv_file, "w", encoding=enc) as f:
+#     for r in fake_records:
+#         linia = ";".join(map(str, r.values()))
+#         f.write(linia + "\n")
 
 
-# zapis z wykorzystaniem Pandas
-tabela = pd.DataFrame(fake_records)
-print(tabela)
-tabela.to_csv(csv_file_pandas, index=False, sep=";")
-tabela.to_excel(xlsx_file_pandas, index=False)
+# # zapis z wykorzystaniem Pandas
+# tabela = pd.DataFrame(fake_records)
+# print(tabela)
+# tabela.to_csv(csv_file_pandas, index=False, sep=";")
+# tabela.to_excel(xlsx_file_pandas, index=False)
 
-# wczytanie danych z Excela
-# dane = pd.read_excel(nazwa_pliku)
+# # wczytanie danych z Excela
+# # dane = pd.read_excel(nazwa_pliku)
 
 
 # Anglia - Holandia
