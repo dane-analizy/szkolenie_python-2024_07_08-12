@@ -627,3 +627,4 @@ print("\033c", end="")
 
 
 # Anglia - Holandia
+# rowiązanie w pliku eng-ned.py
