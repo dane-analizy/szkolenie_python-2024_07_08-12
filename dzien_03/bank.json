@@ -1,0 +1,18 @@
+[
+    {'imie': 'imie1', 'nazwisko': 'nazwisko1', 'pesel': 'pesel1', 'konto pln': 'z', 'lokata 3m pln': 'a', 'lokata 3m eur': nan, 'lokata 6m pln': nan
+    },
+    {'imie': 'imie2', 'nazwisko': 'nazwisko2', 'pesel': 'pesel2', 'konto pln': 'z', 'konto eur': 'b', 'lokata 3m eur': nan, 'lokata 6m pln': nan
+    },
+    {'imie': 'imie3', 'nazwisko': 'nazwisko3', 'pesel': 'pesel3', 'konto pln': 'z', 'lokata 3m eur': nan, 'lokata 6m pln': nan
+    },
+    {'imie': 'imie4', 'nazwisko': 'nazwisko4', 'pesel': 'pesel4', 'konto pln': 'z', 'konto chf': 'c', 'lokata 3m eur': nan, 'lokata 6m pln': nan
+    },
+    {'imie': 'imie5', 'nazwisko': 'nazwisko5', 'pesel': 'pesel5', 'konto pln': 'z', 'lokata 3m eur': 'a', 'lokata 6m pln': nan
+    },
+    {'imie': 'imie6', 'nazwisko': 'nazwisko6', 'pesel': 'pesel6', 'konto pln': 'z', 'lokata 3m eur': nan, 'lokata 6m pln': nan
+    },
+    {'imie': 'imie7', 'nazwisko': 'nazwisko7', 'pesel': 'pesel7', 'konto pln': nan, 'konto eur': 'b', 'lokata 3m eur': nan, 'lokata 6m pln': nan
+    },
+    {'imie': 'imie8', 'nazwisko': 'nazwisko8', 'pesel': 'pesel8', 'konto pln': nan, 'lokata 3m eur': nan, 'lokata 6m pln': 'x'
+    }
+]
