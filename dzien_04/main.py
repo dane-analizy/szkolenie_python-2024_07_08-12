@@ -170,3 +170,23 @@ print("\033c", end="")
 
 #     bmi = wylicz_bmi(wzrost_m, waga_kg)
 #     print(f"BMI dla {imie} {nazwisko} wynosi {bmi:.2f}")
+
+
+### ZADANIE
+
+# Przygotuj funkcję, która wyliczy na podstawie wagi i wzrostu (parametry) BMI.
+# W przypadku pojawienia się wyjątku - wypisze na konsoli błąd i zwróci wartość -1.
+
+
+# czyli popraw funkcję:
+
+# def wylicz_bmi(wzrost_m, waga_kg):
+#     bmi = waga_kg / wzrost_m**2
+#     return bmi
+
+
+# def czy_parzysta(liczba):
+#     return bool(liczba % 2 == 0)
+
+# print(czy_parzysta(1))
+# print(czy_parzysta(2))
