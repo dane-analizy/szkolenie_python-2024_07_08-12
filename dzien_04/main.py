@@ -408,20 +408,26 @@ print("\033c", end="")
 # poka_plik(nazwa_os)
 
 
-# wielkość pliku
-from pathlib import Path
+# # wielkość pliku
+# from pathlib import Path
 
-# jakiś nasz plik
-plik = Path(".") / "bmi.csv"
-# informacje o nim
-print(plik.stat())
+# # jakiś nasz plik
+# plik = Path(".") / "bmi.csv"
+# # informacje o nim
+# print(plik.stat())
 
-# np. timestamp utworzenia
-print(plik.stat().st_ctime)
+# # np. timestamp utworzenia
+# print(plik.stat().st_ctime)
 
-# np. wielkosc w bajtach
-print(plik.stat().st_size)
+# # np. wielkosc w bajtach
+# print(plik.stat().st_size)
 
-# tworzenie katalogu
-# s = Path(".") / "jakis_katalog"
-# s.mkdir(exist_ok=True)
+# # tworzenie katalogu
+# # s = Path(".") / "jakis_katalog"
+# # s.mkdir(exist_ok=True)
+
+
+# modułu funkcji
+# pakiety
+# przerwa
+# baza danych - dbeaver, tworzenie tabeli, podłączanie się do bazy, select i inserty
