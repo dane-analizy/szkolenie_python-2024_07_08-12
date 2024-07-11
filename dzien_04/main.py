@@ -511,25 +511,28 @@ print("\033c", end="")
 
 # import nie-wszystkiego
 
-from modul_v2 import funkcja_a, kim_jestem
+# from modul_v2 import funkcja_a, kim_jestem
 
 
-# from modul_v2 import * # importowanie wszystkiego z modułu - NIE RÓB TAK NIGDY
+# # from modul_v2 import * # importowanie wszystkiego z modułu - NIE RÓB TAK NIGDY
 
 
-def main():
-    funkcja_a()
-    kim_jestem()
+# def main():
+#     funkcja_a()
+#     kim_jestem()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 
 ### ZADANIE
 
-# Przygotuj modul do wczytywania danych z pliku.
-# Wykorzystaj wczesniej napisane funkcje
+# Przygotuj modul plik.py do wczytywania danych z pliku.
+# Wykorzystaj wczesniej napisane funkcje do zbudowania modułu.
+# Uzyj funkcji z modułu.
+
+
 
 
 # pakiety
