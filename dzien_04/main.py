@@ -50,3 +50,17 @@ print("\033c", end="")
 #     except Exception:
 #         print("inny błąd dzielenia, błąd {e}")
 #     print(wynik)
+
+import math
+
+for i in [-2, -1, 0, "a", 1, 2]:
+    try:
+        wynik = 1 / i
+        logarytm = math.log10(i)
+    except ZeroDivisionError as e:  # dzielenie przez zero
+        print(f"Dzielenie przez zero, {i}: {e}")
+    except ValueError as e:  # dzielenie przez błędną wartość
+        print(f"Błędna wartość, {i}: {e}")
+    except Exception as e:  # każdy inny rodzaj błędu
+        print(f"{i}, błąd {e}, {type(e)}")
+    print(wynik)
