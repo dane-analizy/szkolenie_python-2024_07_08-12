@@ -431,9 +431,25 @@ print("\033c", end="")
 
 # tworzymy plik modul.py
 
+import modul
+
+print(modul.zmienna_z_modulu)
+modul.funkcja_b()
+
+print("Info z main.py")
+print("Name:", __name__)
+print("File:", __file__)
+
+print("Info z modul.py")
+modul.kim_jestem()
+
+
+
 
 
 
 # pakiety
 # przerwa
 # baza danych - dbeaver, tworzenie tabeli, podłączanie się do bazy, select i inserty
+
+# Jupyter Notebook
