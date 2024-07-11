@@ -535,6 +535,14 @@ print("\033c", end="")
 # uruchamiamy przez "python start.py"
 
 
+# uniwersalny casting na floata:
+# def as_float(s):
+#     try:
+#         f = float(s)
+#     except:
+#         f = None
+#     return f
+
 
 # pakiety
 # przerwa

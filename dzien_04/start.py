@@ -1,8 +1,8 @@
-import plik
+from plik import daj_czyste_dane_z_pliku
 
 
 def main():
-    dane = plik.daj_czyste_dane_z_pliku()
+    dane = daj_czyste_dane_z_pliku()
     print(dane)
 
 
