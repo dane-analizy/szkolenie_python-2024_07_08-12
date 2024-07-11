@@ -333,3 +333,37 @@ print("\033c", end="")
 
 
 # pliki i katalogi - przeglądanie
+
+# poczytaj o pakiecie os - https://docs.python.org/3/library/os.html#files-and-directories
+
+# pathlib - przyjemniejszy w obsłudze, Python 3.5+
+# from pathlib import Path
+
+# sciezka = Path() # ścieżka do bieżącego katalogu
+# print(sciezka.absolute()) # "rozwinięta" ścieżka
+
+# plik = sciezka / "bmi.csv"
+# print(plik.absolute())  # "rozwinięta" ścieżka do pliku
+# print(type(plik))
+
+# # czy plik istnieje?
+# print(plik.exists())
+
+# # czy to plik czy katalog?
+# print(plik.is_file())
+
+
+# plik = sciezka / "katalog/pliczek.txt"
+# print(plik.absolute())  # "rozwinięta" ścieżka do pliku
+
+# # czy plik istnieje?
+# print(plik.exists())
+
+# # czy to plik czy katalog?
+# print(plik.is_file())
+
+# katalog = sciezka / "katalog"
+# print(katalog.absolute())  # "rozwinięta" ścieżka do pliku
+# print(katalog.is_file())
+
+
