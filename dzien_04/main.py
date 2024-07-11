@@ -545,6 +545,9 @@ print("\033c", end="")
 
 
 # pakiety
+# rozwiazanie - katalog dzien_04_pakiety
+
+
 # przerwa
 # baza danych - dbeaver, tworzenie tabeli, podłączanie się do bazy, select i inserty
 
