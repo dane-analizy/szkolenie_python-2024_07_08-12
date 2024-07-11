@@ -190,3 +190,53 @@ print("\033c", end="")
 
 # print(czy_parzysta(1))
 # print(czy_parzysta(2))
+
+
+# rozwiazanie zadania:
+# def wylicz_bmi(wzrost, waga):
+#     try:
+#         bmi = waga / wzrost**2
+#         return bmi
+#     except:
+#         print("Błędne dane o wzroście lub wadze")
+#         return -1
+
+
+# to samo, nieco inaczej:
+
+# def wylicz_bmi(wzrost, waga):
+#     try:
+#         bmi = waga / wzrost**2
+#     except Exception as e:
+#         bmi = -1
+#         print("Błędne dane o wzroście lub wadze")
+#     return bmi
+
+
+# uzycie funkcji z rozwiazania
+# bmi = wylicz_bmi("a", 78)
+# if bmi < 0:
+#     print("jakiś problem")
+# else:
+#     print(f"{bmi=}")
+
+
+# funkcje moga wywoływać inne funkcje
+
+# def daj_czyste_dane_z_pliku(nazwa_pliku):
+#     plik = otworz_plik(nazwa_pliku)
+#     dane = wczytaj_z_pliku(plik)
+#     dane_czyste = oczysc_dane(dane)
+#     return dane_czyste
+
+# dane = daj_czyste_dane_z_pliku("bmi.csv")
+
+### ZADANIE
+
+# Napisz jedną lub zestaw funkcji pobierającą dane z pliku CSV.
+# Założenia:
+#   - parametry: nazwa pliku, encoding, separator
+#   - wyjście: lista krotek; każda krotka = linia z pliku
+
+
+# pliki i katalogi - przeglądanie
