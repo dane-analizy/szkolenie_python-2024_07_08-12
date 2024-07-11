@@ -74,3 +74,44 @@ print("\033c", end="")
 
 
 # otwieramy plik, ładujemy dane z linii, odpowiedni casting zmiennych i wyliczenie BMI
+
+nazwa_pliku = "bmi.csv"
+enc = "utf-8"
+separator = ";"
+
+lista = [linia.strip().split(separator) for linia in open(nazwa_pliku, encoding=enc)]
+
+for nr, elem in enumerate(lista, start=1):
+    imie = elem[0]
+    nazwisko = elem[1]
+    try:
+        wzrost_m = float(elem[2]) / 100
+        waga_kg = float(elem[3])
+    except ValueError:
+        print(f"Błędne dane o wzroście lub wadze dla {imie} {nazwisko} - linia {nr}")
+        continue
+
+    bmi = waga_kg / wzrost_m**2
+    print(f"BMI dla {imie} {nazwisko} wynosi {bmi:.2f}")
+
+
+# lepiej rozdzieli try-except na kroki
+# try:
+#     wczytaj dane
+# except
+#     nie udało się wczytac danych
+
+# try:
+#     przelicz agregat
+# except
+#     nie udało się przeliczyć agregatów
+
+# try:
+#     scal agregaty
+# except
+#     nie udało się scalic danych
+
+# try:
+#     zapisz dane
+# except
+#     nie udało się zaspisac raporty
