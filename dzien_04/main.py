@@ -51,16 +51,26 @@ print("\033c", end="")
 #         print("inny błąd dzielenia, błąd {e}")
 #     print(wynik)
 
-import math
+# import math
 
-for i in [-2, -1, 0, "a", 1, 2]:
-    try:
-        wynik = 1 / i
-        logarytm = math.log10(i)
-    except ZeroDivisionError as e:  # dzielenie przez zero
-        print(f"Dzielenie przez zero, {i}: {e}")
-    except ValueError as e:  # dzielenie przez błędną wartość
-        print(f"Błędna wartość, {i}: {e}")
-    except Exception as e:  # każdy inny rodzaj błędu
-        print(f"{i}, błąd {e}, {type(e)}")
-    print(wynik)
+# for i in [-2, -1, 0, "a", 1, 2]:
+#     try:
+#         wynik = 1 / i
+#         logarytm = math.log10(i)
+#     except ZeroDivisionError as e:  # dzielenie przez zero
+#         print(f"Dzielenie przez zero, {i}: {e}")
+#     except ValueError as e:  # dzielenie przez błędną wartość
+#         print(f"Błędna wartość, {i}: {e}")
+#     except Exception as e:  # każdy inny rodzaj błędu
+#         print(f"{i}, błąd {e}, {type(e)}")
+#     print(wynik)
+
+
+### ZADANIE
+
+# Wczytaj dane z pliku bmi.csv (uwaga - w pliku jest błąd - jedna z liczb ma dodany znak)
+# i policz oraz wypisz na konsoli wskaźnik BMI dla każdej kolejnej osoby.
+# Obsłuż potencjalne błędy.
+
+
+# otwieramy plik, ładujemy dane z linii, odpowiedni casting zmiennych i wyliczenie BMI
