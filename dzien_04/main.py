@@ -427,7 +427,13 @@ print("\033c", end="")
 # # s.mkdir(exist_ok=True)
 
 
-# modułu funkcji
+# moduły funkcji
+
+# tworzymy plik modul.py
+
+
+
+
 # pakiety
 # przerwa
 # baza danych - dbeaver, tworzenie tabeli, podłączanie się do bazy, select i inserty
