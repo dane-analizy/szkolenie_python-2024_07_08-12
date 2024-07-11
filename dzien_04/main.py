@@ -572,47 +572,122 @@ print("\033c", end="")
 # db_config = {....}
 # conn_str = f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
 
-import sqlalchemy as sa
-from sqlalchemy import text
-from utils.config import get_config
-from utils.db import generate_connection_string
+# import sqlalchemy as sa
+# from sqlalchemy import text
+# from utils.config import get_config
+# from utils.db import generate_connection_string
 
-# config = get_config("db_config_postgres.yaml")
-# config = get_config("db_config_sqlite.yaml")
-config = get_config("db_config_lukasz.yaml")
-conn_str = generate_connection_string(config, db_type="postgresql")
+# # config = get_config("db_config_postgres.yaml")
+# # config = get_config("db_config_sqlite.yaml")
+# config = get_config("db_config_lukasz.yaml")
+# conn_str = generate_connection_string(config, db_type="postgresql")
 
-# print(conn_str)
+# # print(conn_str)
 
-# przygotowanie silnika bazodanowego
-db_engine = sa.engine.create_engine(conn_str)
+# # przygotowanie silnika bazodanowego
+# db_engine = sa.engine.create_engine(conn_str)
 
-# podłączenie do bazy poprzez nasz silnik
-db_connection = db_engine.connect()
+# # podłączenie do bazy poprzez nasz silnik
+# db_connection = db_engine.connect()
 
-sql_query = """
-SELECT
-    first_name,
-    last_name,
-    weight / (height * height) AS bmi
-FROM
-    players
-;
-"""
-# wywołanie zapytania SQL
-db_results = db_connection.execute(text(sql_query))
+# sql_query = """
+# SELECT
+#     first_name,
+#     last_name,
+#     weight / (height * height) AS bmi
+# FROM
+#     players
+# ;
+# """
+# # wywołanie zapytania SQL
+# db_results = db_connection.execute(text(sql_query))
 
-# nazwy kolumn z zapytania SQL
-db_results_columns = list(db_results.keys())
-print(db_results_columns)
+# # nazwy kolumn z zapytania SQL
+# db_results_columns = list(db_results.keys())
+# print(db_results_columns)
 
-# wiersze z zapytania SQL
-for r in db_results:
-    print(r)
-
-
-# rozłączenie od bazy
-db_connection.close()
+# # wiersze z zapytania SQL
+# for r in db_results:
+#     print(r)
 
 
-# Jupyter Notebook
+# # rozłączenie od bazy
+# db_connection.close()
+
+
+# iteracja przez wiele list na raz
+
+# from itertools import zip_longest
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = ['a', 'b', 'c']
+# l3 = ["abc", "def", "ghi", "jkl"]
+
+# # podanie od razu wartości z wielu list na raz - tylko najkrótsza lista
+# for e in zip(l1, l2, l3):
+#     print(e)
+
+# print("=" * 40)
+
+# # podanie od razu wartości z wielu list na raz - do najdłuższej  listy
+
+# for e in zip_longest(l1, l2, l3):
+#     print(e)
+
+
+# lista danych z bazy z ZIPem
+
+# import sqlalchemy as sa
+# from sqlalchemy import text
+# from utils.config import get_config
+# from utils.db import generate_connection_string
+
+# # config = get_config("db_config_postgres.yaml")
+# # config = get_config("db_config_sqlite.yaml")
+# config = get_config("db_config_lukasz.yaml")
+# conn_str = generate_connection_string(config, db_type="postgresql")
+
+# # print(conn_str)
+
+# # przygotowanie silnika bazodanowego
+# db_engine = sa.engine.create_engine(conn_str)
+
+# # podłączenie do bazy poprzez nasz silnik
+# db_connection = db_engine.connect()
+
+# sql_query = """
+# SELECT
+#     first_name,
+#     last_name,
+#     weight / (height * height) AS bmi,
+#     player_id
+# FROM
+#     players
+# ;
+# """
+# # wywołanie zapytania SQL
+# db_results = db_connection.execute(text(sql_query))
+
+# # nazwy kolumn z zapytania SQL
+# db_results_columns = list(db_results.keys())
+# # print(db_results_columns)
+
+# # wiersze z zapytania SQL
+# list_of_results = [
+#     {col[0]: col[1] for col in zip(db_results_columns, row)} for row in db_results
+# ]
+# print(list_of_results)
+
+# # rozłączenie od bazy
+# db_connection.close()
+
+
+### ZADANIE
+# Zbuduj w module db w pakiecie utils funkcję, która:
+# - pobierze w argumentach connection string oraz zapytanie w SQL
+# - wynik zwróci jako listę słowników
+
+
+# użycie rozwiązania - plik "get_db.py"
+
+# rozwiązanie - plik utils/db.py
