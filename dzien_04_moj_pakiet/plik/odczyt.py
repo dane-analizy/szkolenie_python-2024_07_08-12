@@ -1,0 +1,2 @@
+def ladujdane():
+    pass

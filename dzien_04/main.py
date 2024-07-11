@@ -548,11 +548,12 @@ print("\033c", end="")
 # przykład - cały katalog dzien_04_pakiety
 
 
-
 ### ZADANIE
 # Utworz nowy katalog - np. "dzien_04_moj_pakiet". W nim przygotuj strukturę  analogiczną do "dzien_04_pakiety", ale:
 #  - stwórz pakiet "plik" z modułem "odczyt", w ktorym będą funkcje do odczytu danych z plików
 #  - stwórz drugi pakiet "obliczenia", gdzie będzie moduł "bmi" z funkcją liczącą BMI
+
+# rozwiązanie - w oddzielnym katalogu "dzien_04_moj_pakiet"
 
 
 # przerwa
