@@ -572,16 +572,47 @@ print("\033c", end="")
 # db_config = {....}
 # conn_str = f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
 
+import sqlalchemy as sa
+from sqlalchemy import text
 from utils.config import get_config
 from utils.db import generate_connection_string
 
-
 # config = get_config("db_config_postgres.yaml")
-config = get_config("db_config_sqlite.yaml")
-conn_str = generate_connection_string(config, db_type="sqlite")
+# config = get_config("db_config_sqlite.yaml")
+config = get_config("db_config_lukasz.yaml")
+conn_str = generate_connection_string(config, db_type="postgresql")
 
-print(conn_str)
+# print(conn_str)
 
+# przygotowanie silnika bazodanowego
+db_engine = sa.engine.create_engine(conn_str)
+
+# podłączenie do bazy poprzez nasz silnik
+db_connection = db_engine.connect()
+
+sql_query = """
+SELECT
+    first_name,
+    last_name,
+    weight / (height * height) AS bmi
+FROM
+    players
+;
+"""
+# wywołanie zapytania SQL
+db_results = db_connection.execute(text(sql_query))
+
+# nazwy kolumn z zapytania SQL
+db_results_columns = list(db_results.keys())
+print(db_results_columns)
+
+# wiersze z zapytania SQL
+for r in db_results:
+    print(r)
+
+
+# rozłączenie od bazy
+db_connection.close()
 
 
 # Jupyter Notebook
