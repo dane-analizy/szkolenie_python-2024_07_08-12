@@ -559,7 +559,29 @@ print("\033c", end="")
 # przerwa
 # baza danych - dbeaver, tworzenie tabeli, podłączanie się do bazy, select i inserty
 
+
+# podłączenie się do bazy danych
+
+# pakiet SQLAlchemy
+# instalacja: pip install sqlalchemy
+
+# connection string: https://docs.sqlalchemy.org/en/20/core/engines.html#backend-specific-urls
+# przykład/składnia: "postgresql+psycopg2://LOGIN:HASŁO@MASZYNA/BAZADANYCH"
+
+# generowanie conn-str z konfiguracji: pakiet utils
+# db_config = {....}
+# conn_str = f"postgresql+psycopg2://{db_config['db_user']}:{db_config['db_pass']}@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
+
+from utils.config import get_config
+from utils.db import generate_connection_string
+
+
+# config = get_config("db_config_postgres.yaml")
+config = get_config("db_config_sqlite.yaml")
+conn_str = generate_connection_string(config, db_type="sqlite")
+
+print(conn_str)
+
+
+
 # Jupyter Notebook
-
-
-baza_danych.sqlite
