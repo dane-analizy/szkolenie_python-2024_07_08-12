@@ -367,3 +367,42 @@ print("\033c", end="")
 # print(katalog.is_file())
 
 
+# lista wszystkiego w katalogu
+# from pathlib import Path
+
+# # punkt startowy
+# sciezka = Path("C:\\Users\\lemur\\Desktop\\szkolenie_python\\kod")
+# print(sciezka.absolute())
+
+# # lista plikow
+# lista = sciezka.glob("*")
+# for e in lista:
+#     plik_czy_folder = "plik" if e.is_file() else "katalog"
+#     print(f"{e} jest {plik_czy_folder}")
+
+#     if not e.is_file():
+#         for ee in e.glob("*"):
+#             print(f"\t - {ee}")
+
+
+# from pathlib import Path
+# import os
+
+
+# def poka_plik(nasz_plik):
+#     for l in open(nasz_plik, "r", encoding="utf-8"):
+#         print(l.strip())
+
+# # sklejanie katalogu i pliku
+# nazwa_path = Path(".") / "bmi.csv"
+# print(nazwa_path)
+# poka_plik(nazwa_path)
+
+# print("=" * 80)
+
+# nazwa_katalogu = "."
+# nazwa_pliku = "bmi.csv"
+# # sklejanie katalogu i pliku
+# nazwa_os = os.path.join(nazwa_katalogu, nazwa_pliku)
+# print(nazwa_os)
+# poka_plik(nazwa_os)
