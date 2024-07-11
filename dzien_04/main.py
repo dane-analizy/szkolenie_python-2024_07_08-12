@@ -75,24 +75,24 @@ print("\033c", end="")
 
 # otwieramy plik, ładujemy dane z linii, odpowiedni casting zmiennych i wyliczenie BMI
 
-nazwa_pliku = "bmi.csv"
-enc = "utf-8"
-separator = ";"
+# nazwa_pliku = "bmi.csv"
+# enc = "utf-8"
+# separator = ";"
 
-lista = [linia.strip().split(separator) for linia in open(nazwa_pliku, encoding=enc)]
+# lista = [linia.strip().split(separator) for linia in open(nazwa_pliku, encoding=enc)]
 
-for nr, elem in enumerate(lista, start=1):
-    imie = elem[0]
-    nazwisko = elem[1]
-    try:
-        wzrost_m = float(elem[2]) / 100
-        waga_kg = float(elem[3])
-    except ValueError:
-        print(f"Błędne dane o wzroście lub wadze dla {imie} {nazwisko} - linia {nr}")
-        continue
+# for nr, elem in enumerate(lista, start=1):
+#     imie = elem[0]
+#     nazwisko = elem[1]
+#     try:
+#         wzrost_m = float(elem[2]) / 100
+#         waga_kg = float(elem[3])
+#     except ValueError:
+#         print(f"Błędne dane o wzroście lub wadze dla {imie} {nazwisko} - linia {nr}")
+#         continue
 
-    bmi = waga_kg / wzrost_m**2
-    print(f"BMI dla {imie} {nazwisko} wynosi {bmi:.2f}")
+#     bmi = waga_kg / wzrost_m**2
+#     print(f"BMI dla {imie} {nazwisko} wynosi {bmi:.2f}")
 
 
 # lepiej rozdzieli try-except na kroki
@@ -115,3 +115,58 @@ for nr, elem in enumerate(lista, start=1):
 #     zapisz dane
 # except
 #     nie udało się zaspisac raporty
+
+
+# Funkcje
+
+# DRY - Don't Repeat Yourself
+
+# użycie funkcji z parametrami
+# bmi = wylicz_bmi(wzrost, waga)
+# wylicz_bmi(wzrost, waga) # to nie zwraca wartości
+
+# def wylicz_bmi(wzrost, waga):
+#     bmi = waga / wzrost**2
+#     # print(f"bmi w ciele funkcji: {bmi}")
+
+#     return bmi
+
+
+# print(wylicz_bmi(1.85, 60))
+# print(wylicz_bmi(1.95, 89))
+
+
+# przykład z użyciem funkcji:
+# def wylicz_bmi(wzrost: float, waga: float) -> float:
+#     """Funkcja wylicza wskaźnik BMI z podanych parametrów.
+
+#     Parametry:
+#         - wzrost - liczba typu float, wzrost w metrach
+#         - waga - liczba typu float, waga w kilogramach
+
+#     Wynik:
+#         - wyliczony wskaźnik BMI
+#     """
+#     bmi = waga / wzrost**2
+#     # print(f"bmi w ciele funkcji: {bmi}")
+#     return bmi
+
+
+# nazwa_pliku = "bmi.csv"
+# enc = "utf-8"
+# separator = ";"
+
+# lista = [linia.strip().split(separator) for linia in open(nazwa_pliku, encoding=enc)]
+
+# for nr, elem in enumerate(lista, start=1):
+#     imie = elem[0]
+#     nazwisko = elem[1]
+#     try:
+#         wzrost_m = float(elem[2]) / 100
+#         waga_kg = float(elem[3])
+#     except ValueError:
+#         print(f"Błędne dane o wzroście lub wadze dla {imie} {nazwisko} - linia {nr}")
+#         continue
+
+#     bmi = wylicz_bmi(wzrost_m, waga_kg)
+#     print(f"BMI dla {imie} {nazwisko} wynosi {bmi:.2f}")
