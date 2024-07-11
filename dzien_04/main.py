@@ -531,7 +531,8 @@ print("\033c", end="")
 # Przygotuj modul plik.py do wczytywania danych z pliku.
 # Wykorzystaj wczesniej napisane funkcje do zbudowania modułu.
 # Uzyj funkcji z modułu.
-
+# rozwiązanie - pliki start.py oraz plik.py
+# uruchamiamy przez "python start.py"
 
 
 
