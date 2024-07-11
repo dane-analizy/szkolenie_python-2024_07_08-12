@@ -406,3 +406,22 @@ print("\033c", end="")
 # nazwa_os = os.path.join(nazwa_katalogu, nazwa_pliku)
 # print(nazwa_os)
 # poka_plik(nazwa_os)
+
+
+# wielkość pliku
+from pathlib import Path
+
+# jakiś nasz plik
+plik = Path(".") / "bmi.csv"
+# informacje o nim
+print(plik.stat())
+
+# np. timestamp utworzenia
+print(plik.stat().st_ctime)
+
+# np. wielkosc w bajtach
+print(plik.stat().st_size)
+
+# tworzenie katalogu
+# s = Path(".") / "jakis_katalog"
+# s.mkdir(exist_ok=True)
