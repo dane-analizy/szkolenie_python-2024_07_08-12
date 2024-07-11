@@ -231,12 +231,14 @@ print("\033c", end="")
 
 # dane = daj_czyste_dane_z_pliku("bmi.csv")
 
+
 ### ZADANIE
 
 # Napisz jedną lub zestaw funkcji pobierającą dane z pliku CSV.
 # Założenia:
 #   - parametry: nazwa pliku, encoding, separator
 #   - wyjście: lista krotek; każda krotka = linia z pliku
+#   - pusta linia nie trafia do listy
 
 
 # pliki i katalogi - przeglądanie
