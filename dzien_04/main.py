@@ -560,3 +560,6 @@ print("\033c", end="")
 # baza danych - dbeaver, tworzenie tabeli, podłączanie się do bazy, select i inserty
 
 # Jupyter Notebook
+
+
+baza_danych.sqlite
