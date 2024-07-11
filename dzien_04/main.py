@@ -286,34 +286,50 @@ print("\033c", end="")
 # parametry domyślne
 
 
-def wez_nazwe_pliku():
-    return input("Podaj nazwe pliku: ")
+# def wez_nazwe_pliku():
+#     return input("Podaj nazwe pliku: ")
 
 
-def wczytaj_linie(nazwa_pliku, enc):
-    return [
-        linia.strip()
-        for linia in open(nazwa_pliku, "r", encoding=enc)
-        if len(linia.strip())
-    ]
+# def wczytaj_linie(nazwa_pliku, enc):
+#     return [
+#         linia.strip()
+#         for linia in open(nazwa_pliku, "r", encoding=enc)
+#         if len(linia.strip())
+#     ]
 
 
-def podziel_linie(lista_linii, separator):
-    return [tuple(linia.split(separator)) for linia in lista_linii]
+# def podziel_linie(lista_linii, separator):
+#     return [tuple(linia.split(separator)) for linia in lista_linii]
 
 
-def daj_czyste_dane_z_pliku(nazwa=None, enc="utf-8", sep=";"):
-    if not nazwa:
-        # parametr "nazwa" nie został podany, więc zapytaj użytkownika
-        nazwa = wez_nazwe_pliku()
-    # czy plik o nazwie zawartej w zmiennej "nazwa" istnieje? -> zagadnienie z plików
-    dane = wczytaj_linie(nazwa, enc)
-    dane_czyste = podziel_linie(dane, sep)
-    return dane_czyste
+# def daj_czyste_dane_z_pliku(nazwa=None, enc="utf-8", sep=";"):
+#     if not nazwa:
+#         # parametr "nazwa" nie został podany, więc zapytaj użytkownika
+#         nazwa = wez_nazwe_pliku()
+#     # czy plik o nazwie zawartej w zmiennej "nazwa" istnieje? -> zagadnienie z plików
+#     dane = wczytaj_linie(nazwa, enc)
+#     dane_czyste = podziel_linie(dane, sep)
+#     return dane_czyste
 
 
-dane = daj_czyste_dane_z_pliku()
-print(dane)
+# dane = daj_czyste_dane_z_pliku()
+# print(dane)
+
+
+# wszystko w jednej funkcji
+# def daj_czyste_dane_z_pliku(nazwa=None, enc="utf-8", sep=";"):
+#     if not nazwa:
+#         # parametr "nazwa" nie został podany, więc zapytaj użytkownika
+#         nazwa = input("Podaj nazwe pliku: ")
+#     return [
+#         tuple(linia.split(sep))
+#         for linia in open(nazwa, "r", encoding=enc)
+#         if len(linia.strip())
+#     ]
+
+
+# dane = daj_czyste_dane_z_pliku("bmi.csv")
+# print(dane)
 
 
 # pliki i katalogi - przeglądanie
