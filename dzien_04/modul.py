@@ -31,3 +31,5 @@ zmienna_z_modulu = "jestem sobie zmienną z modułu modul.py"
 kim_jestem()
 print("Koniec modul.py")
 
+if __name__ == "__main__":
+    print("Uruchomiłeś mnie (modul.py) jako punkt startowy")

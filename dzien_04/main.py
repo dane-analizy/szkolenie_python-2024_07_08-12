@@ -431,21 +431,105 @@ print("\033c", end="")
 
 # tworzymy plik modul.py
 
-import modul
 
-print(modul.zmienna_z_modulu)
-modul.funkcja_b()
+# wykorzystujemy plik modul.py
+# zobacz co się wykonuje i kiedy
 
-print("Info z main.py")
-print("Name:", __name__)
-print("File:", __file__)
+# import modul
 
-print("Info z modul.py")
-modul.kim_jestem()
+# print(modul.zmienna_z_modulu)
+# modul.funkcja_b()
+
+# print("Info z main.py")
+# print("Name:", __name__)
+# print("File:", __file__)
+
+# print("Info z modul.py")
+# modul.kim_jestem()
 
 
+# po co jest if __name__ == "__main__" ?
+
+# import modul
+
+# print(modul.zmienna_z_modulu)
+# modul.funkcja_b()
+
+# print("Info z main.py")
+# print("Name:", __name__)
+# print("File:", __file__)
+
+# print("Info z modul.py")
+# modul.kim_jestem()
 
 
+# if __name__ == "__main__":
+#     print("Uruchomiłeś mnie (main.py) jako punkt startowy")
+
+
+# dobre praktyki - nie wykonuj nic poza funkcją main()
+
+# import modul
+
+
+# def main():
+#     print(modul.zmienna_z_modulu)
+#     modul.funkcja_b()
+
+#     print("Info z main.py")
+#     print("Name:", __name__)
+#     print("File:", __file__)
+
+#     print("Info z modul.py")
+#     modul.kim_jestem()
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+# dobra praktyka - porównaj modul.py i modul_v2.py
+
+# import modul_v2 as modul
+
+
+# def main():
+#     # print(modul.zmienna_z_modulu)
+#     modul.funkcja_b()
+
+#     print("Info z main.py")
+#     print("Name:", __name__)
+#     print("File:", __file__)
+
+#     print("Info z modul.py")
+#     modul.kim_jestem()
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+# import nie-wszystkiego
+
+from modul_v2 import funkcja_a, kim_jestem
+
+
+# from modul_v2 import * # importowanie wszystkiego z modułu - NIE RÓB TAK NIGDY
+
+
+def main():
+    funkcja_a()
+    kim_jestem()
+
+
+if __name__ == "__main__":
+    main()
+
+
+### ZADANIE
+
+# Przygotuj modul do wczytywania danych z pliku.
+# Wykorzystaj wczesniej napisane funkcje
 
 
 # pakiety
