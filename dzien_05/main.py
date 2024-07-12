@@ -154,3 +154,49 @@ print("\033c", end="")
 # # json.loads(result.text)
 # wynik = result.json()
 # print(wynik)
+
+
+# czy string jest w liście stringów
+# if "abc" in ['abc', 'cdf', 'xyz']:
+    # "abc" jest na liście
+
+
+### ZADANIE
+
+# korzystając z API NBP pobierz tabelę kursów z kolejnych dni czerwca 2024 i wyświetl na ekranie kursy GBP, USD, CHF
+
+# Wyswietlamy:
+
+# 2024-06-01:
+# \t USD = 4.234
+# \t CHF = 4.700
+#..
+# 2024-06-02:
+# \t USD = 4.234
+# \t CHF = 4.700
+
+
+# Endpoint - przykładowe zapytanie https://api.nbp.pl/api/exchangerates/tables/a/2024-07-11/?format=json
+
+# struktura odpowiedzi:
+# [
+#     {
+#         "table": "A",
+#         "no": "134/A/NBP/2024",
+#         "effectiveDate": "2024-07-11",
+#         "rates": [
+#             {
+#                 "currency": "bat (Tajlandia)",
+#                 "code": "THB",
+#                 "mid": 0.1082
+#             },
+# ...
+
+#             {
+#                 "currency": "SDR (MFW)",
+#                 "code": "XDR",
+#                 "mid": 5.1940
+#             }
+#         ]
+#     }
+# ]
