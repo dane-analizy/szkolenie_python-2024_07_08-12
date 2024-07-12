@@ -23,6 +23,11 @@ from utils.nbp import get_month_rates
 
 
 def main():
+    # baza w sqlite
+    # config = get_config("db_config_sqlite.yaml")
+    # db_conn_str = generate_connection_string(config, "sqlite")
+
+    # baza w postgresql:
     config = get_config("db_config_lukasz.yaml")
     db_conn_str = generate_connection_string(config, "postgresql")
     db_engine = sa.engine.create_engine(db_conn_str)
