@@ -208,3 +208,5 @@ print("\033c", end="")
 
 # Korzystając z "nbp_loader" zapisz dane do tabeli w bazie SQL.
 # Tabelę zrób poza kodem.
+
+# rowziazanie -> nbp_db
