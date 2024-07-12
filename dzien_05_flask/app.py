@@ -20,3 +20,8 @@ def nowa_strona():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+### ZADANIE
+
+# dodaj kilka kolejnych stron do aplikacji Flaskowej
