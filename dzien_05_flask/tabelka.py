@@ -24,6 +24,16 @@ def dodaj(a, b):
     return {"a": a, "b": b, "suma": dodawanie(a, b)}
 
 
+@app.route("/mult/<a>/<b>")
+def iloczyn(a, b):
+    a = float(a)
+    b = float(b)
+    iloczyn = a * b
+    return render_template(
+        "mnozenie.html", wynik={"czynna": a, "czynnik": b, "mul": iloczyn}
+    )
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
