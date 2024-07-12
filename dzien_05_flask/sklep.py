@@ -30,3 +30,9 @@ def produkty():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+### ZADANIE
+# zamien
+# <p>To jest jakiś tekst <strong>boldem</strong> i <em>italiciem</em></p>
+# w każdej z podstron na coś doklejanego z nowej templatki
