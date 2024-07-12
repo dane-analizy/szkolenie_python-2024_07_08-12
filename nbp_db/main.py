@@ -30,6 +30,7 @@ def main():
     # baza w postgresql:
     config = get_config("db_config_lukasz.yaml")
     db_conn_str = generate_connection_string(config, "postgresql")
+
     db_engine = sa.engine.create_engine(db_conn_str)
     db_connection = db_engine.connect()
 
