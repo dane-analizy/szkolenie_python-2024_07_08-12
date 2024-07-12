@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Kurs {{ waluta }}</title>
+</head>
+
+<body>
+    <h1>Kurs {{ waluta }}:</h1>
+    <table border="1">
+        <tr>
+            <td><strong>Data</strong></td>
+            <td><strong>Kurs</strong></td>
+        </tr>
+
+        {% for kwotowanie in notowania %}
+        <tr>
+            <td>{{ kwotowanie.data }}</td>
+            <td>{{ kwotowanie.kurs }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    </ul>
+</body>
+
+</html>
