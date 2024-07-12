@@ -133,7 +133,6 @@ print("\033c", end="")
 # db_connection.commit()
 
 
-
 # usługi sieciowe
 # API NBP - dokumentacja https://api.nbp.pl/
 
@@ -146,8 +145,8 @@ print("\033c", end="")
 
 # result = requests.get(url)
 # print(result)
-# print(result.status_code) # HTTP status 
-# # print(result.content) # zwrócona zawartość 
+# print(result.status_code) # HTTP status
+# # print(result.content) # zwrócona zawartość
 # # print(result.text) # zwrócona zawartość jako string
 
 # # żeby dostać słownik z odpowiedzi:
@@ -158,7 +157,7 @@ print("\033c", end="")
 
 # czy string jest w liście stringów
 # if "abc" in ['abc', 'cdf', 'xyz']:
-    # "abc" jest na liście
+# "abc" jest na liście
 
 
 ### ZADANIE
@@ -170,7 +169,7 @@ print("\033c", end="")
 # 2024-06-01:
 # \t USD = 4.234
 # \t CHF = 4.700
-#..
+# ..
 # 2024-06-02:
 # \t USD = 4.234
 # \t CHF = 4.700
@@ -200,3 +199,6 @@ print("\033c", end="")
 #         ]
 #     }
 # ]
+
+
+# rozwiązanie -> cały katalog nbp_loader
