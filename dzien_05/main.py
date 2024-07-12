@@ -131,3 +131,26 @@ print("\033c", end="")
 #         db_connection.commit()
 
 # db_connection.commit()
+
+
+
+# usługi sieciowe
+# API NBP - dokumentacja https://api.nbp.pl/
+
+# potrzebny pakiet requests
+# pip install requests
+
+# import requests
+
+# url = "http://api.nbp.pl/api/exchangerates/tables/a/2024-07-01/2024-07-12/?format=json"
+
+# result = requests.get(url)
+# print(result)
+# print(result.status_code) # HTTP status 
+# # print(result.content) # zwrócona zawartość 
+# # print(result.text) # zwrócona zawartość jako string
+
+# # żeby dostać słownik z odpowiedzi:
+# # json.loads(result.text)
+# wynik = result.json()
+# print(wynik)
