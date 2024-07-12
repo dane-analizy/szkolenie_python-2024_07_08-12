@@ -28,12 +28,13 @@ def main():
     db_engine = sa.engine.create_engine(db_conn_str)
     db_connection = db_engine.connect()
 
-    lista_notowan = get_month_rates(6, 2024)
+    for m in range(1, 8):
+        lista_notowan = get_month_rates(m, 2024)
 
-    # wywołanie zapytania SQL
-    sql_query = 'INSERT INTO nbp (data, "CHF", "EUR", "GBP", "USD") VALUES (:data, :CHF, :EUR, :GBP, :USD)'
-    db_results = db_connection.execute(text(sql_query), lista_notowan)
-    db_connection.commit()
+        # wywołanie zapytania SQL
+        sql_query = 'INSERT INTO nbp (data, "CHF", "EUR", "GBP", "USD") VALUES (:data, :CHF, :EUR, :GBP, :USD)'
+        db_connection.execute(text(sql_query), lista_notowan)
+        db_connection.commit()
 
     # rozłączenie od bazy
     db_connection.close()

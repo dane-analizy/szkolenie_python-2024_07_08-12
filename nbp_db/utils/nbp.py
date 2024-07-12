@@ -1,3 +1,6 @@
+import time
+
+
 import requests
 
 JAKIE_WALUTY = ["GBP", "USD", "EUR", "CHF"]
@@ -10,6 +13,7 @@ def get_nbp_table(dzien, miesiac, rok):
     notowania = {"data": data, "error": False}
 
     try:
+        time.sleep(0.1)
         res = requests.get(url)
     except Exception as e:
         print(f"Błąd zapytania o {url}: {e}")
