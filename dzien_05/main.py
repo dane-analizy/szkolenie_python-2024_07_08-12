@@ -202,3 +202,9 @@ print("\033c", end="")
 
 
 # rozwiązanie -> cały katalog nbp_loader
+
+
+### ZADANIE
+
+# Korzystając z "nbp_loader" zapisz dane do tabeli w bazie SQL.
+# Tabelę zrób poza kodem.
