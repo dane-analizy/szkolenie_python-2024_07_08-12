@@ -35,36 +35,40 @@
 # renredowanie templatek
 
 
-from flask import Flask, render_template
+# from flask import Flask, render_template
 
-app = Flask(__name__)
-
-
-@app.route("/index")
-def index():
-    return """
-<html>
-
-<head>
-    <title>Index</title>
-</head>
-
-<body>
-    <h1>Index</h1>
-    <p>To jest jakiś tekst <strong>boldem</strong> i <em>italiciem</em></p>
-</body>
-
-</html>
-"""
+# app = Flask(__name__)
 
 
-@app.route("/")
-def home():
-    return render_template("hp.html")
+# @app.route("/index")
+# def index():
+#     return """
+# <html>
+
+# <head>
+#     <title>Index</title>
+# </head>
+
+# <body>
+#     <h1>Index</h1>
+#     <p>To jest jakiś tekst <strong>boldem</strong> i <em>italiciem</em></p>
+# </body>
+
+# </html>
+# """
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# @app.route("/")
+# def home():
+#     return render_template("hp.html")
+
+# @app.route("/kontakt")
+# def kontakt():
+#     return render_template("kontakt.html")
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
 
 ### ZADANIE
