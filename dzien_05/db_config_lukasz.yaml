@@ -1,0 +1,5 @@
+db_host: prokulski.science  
+db_name: szkolenie  
+db_pass: pass_szkolenie  
+db_port: 5432  
+db_user: u_szkolenie
